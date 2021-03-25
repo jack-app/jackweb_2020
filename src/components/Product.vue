@@ -6,17 +6,19 @@
   <div v-else>
     <img class="productimage" src="@/assets/noimage.png" :alt = "name"/>
   </div>
-  <div class="icons">
+  <!--<p class="productname">{{name}}</p>-->
+  <div class="badges">
     <a v-if = "web" v-bind:href = "web">
-      <img class="iconimage" src="@/assets/website.png" />
-    </a>
-    <a v-if = "ios" v-bind:href ="ios" >
-      <img class="iconimage" src="@/assets/apple.png" />
+      <img class="badgeimage" src="@/assets/web-link-badge.png" />
     </a>
     <a v-if = "android" v-bind:href = "android">
-      <img class="iconimage" src="@/assets/android.png"/>
+      <img class="badgeimage" src="@/assets/google-play-badge.png"/>
+    </a>
+    <a v-if = "ios" v-bind:href ="ios" >
+      <img class="badgeimage" src="@/assets/app-store-badge.svg" />
     </a>
   </div>
+
 </div>
 </template>
 
@@ -37,21 +39,15 @@ export default {
   width: 100%;
 }
 
-.icons {
-  margin-top: 8px;
-  display: flex;
+.badges {
+  margin-top: 25%;
+  /*display: flex;*/
   justify-content: space-around;
 }
 
-.iconimage {
-  width: 3vw;
+.badgeimage {
+  width: 100%;
+  padding: 0,5%;
 }
 
-h3 {
-  margin: 40px 0 0;
-}
-
-a {
-  color: #42b983;
-}
 </style>

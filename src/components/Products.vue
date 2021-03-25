@@ -51,5 +51,7 @@ export default {
 <style scoped>
 .product-container{
   display: flex;
+  width:80%;
+  margin: 0 auto;
 }
 </style>

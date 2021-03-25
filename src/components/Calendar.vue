@@ -10,11 +10,13 @@
 
 <style scoped>
 .calendar-container iframe {
-  position: relative;
-  width:80%;
+  width:100%;
   height: 50vh;
   max-height: 300px;
-  overflow: hidden;
-
+  text-align: center;
+}
+.calendar-container{
+  width: 80%;
+  margin: 0 auto;
 }
 </style>

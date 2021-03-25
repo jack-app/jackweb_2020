@@ -26,12 +26,12 @@
         <div class="content products">
           <div class="products__title title">プロダクト一覧</div>
           <div class="products__lists">
-            <!-- <Products /> -->
+            <Products />
           </div>
         </div>
         <div class="content calendar">
           <h2 class="title">活動予定</h2>
-          <!-- <Calendar /> -->
+          <Calendar />
         </div>
         <div class="content">
           <div class="title">よくある質問</div>
@@ -50,12 +50,16 @@
 
 <script>
 import InfoTable from './components/InfoTable.vue';
+import Products from './components/Products.vue';
+import Calendar from './components/Calendar.vue'
 
 export default {
   name: 'App',
 
   components: {
-    InfoTable
+    InfoTable,
+    Products,
+    Calendar
   },
 
   // data: () => ({

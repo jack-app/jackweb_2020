@@ -6,7 +6,9 @@
   <div v-else>
     <img class="productimage" src="@/assets/noimage.png" :alt = "name"/>
   </div>
-  <!--<p class="productname">{{name}}</p>-->
+  <div class="producttitle">
+    <p class="productname">{{name}}</p>
+  </div>
   <div class="badges">
     <a v-if = "web" v-bind:href = "web">
       <img class="badgeimage" src="@/assets/web-link-badge.png" />

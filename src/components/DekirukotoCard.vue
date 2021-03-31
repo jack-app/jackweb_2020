@@ -1,7 +1,7 @@
 <template>
   <v-card class="card">
     <img class="cardimg"
-      v-bind:src="imgPath"
+      v-bind:src="icon"
     />
     <v-card-title>{{title}}</v-card-title>
     <v-card-text>
@@ -14,11 +14,6 @@
 <script>
 export default {
   props: ['icon','title','text'],
-  data: function(){
-    return{
-      imgPath: this.icon
-    }
-  }
 }
 
 

@@ -22,7 +22,7 @@
       <div class="baloon_r">
         <div class="says"><p>入会にあたって必要な条件はありません！</p></div>
         <v-avater size="80">
-          <img src="@/assets/Talk4.png" alt="考える人" >
+          <img src="@/assets/Talk4.png" alt="答える人" >
         </v-avater>
       </div>
     </div>

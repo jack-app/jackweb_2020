@@ -1,47 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-              color="tranceparent"
-              src="@/assets/triangle-mosaic.png"
-              hide-on-scroll>
-      <v-toolbar-title>jack</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-    </v-app-bar>
+    <Menubar />
     <v-main>
       <v-container>
-        <div class="content">
-          <div class="title">団体理念</div>
-          <p>やりたいことをやろう</p>
-        </div>
-        <div class="content">
-          <div class="title">団体情報</div>
-          <div class="table-wrapper">
-            <info-table />
-          </div>
-        </div>
-        <div class="content">
+        <div class="content" id="can">
           <div class="title">jackでできること</div>
+          <DekirukotoCards />
         </div>
-        <div class="content products">
+        <div class="content" id="activity">
+          <div class="title">活動内容</div>
+        </div>
+        <div class="content products" id="products">
           <div class="products__title title">プロダクト一覧</div>
           <div class="products__lists">
             <Products />
           </div>
         </div>
-        <div class="content calendar">
+        <div class="content calendar" id="schedule">
           <h2 class="title">活動予定</h2>
           <Calendar />
         </div>
-        <div class="content">
+        <div class="content" id="welcometour">
+          <div class="title">見学したい方</div>
+          <WelcomeTour />
+        </div>
+        <div class="content" id="FAQ">
           <div class="title">よくある質問</div>
           <div class="questions-wrapper">
-            <question-item />
+            <Questions />
           </div>
-        </div>
-        <div class="content">
-          <div class="title">お問い合わせ</div>
-          <p>お問い合わせを入れる</p>
         </div>
       </v-container>
     </v-main>
@@ -49,17 +36,23 @@
 </template>
 
 <script>
-import InfoTable from './components/InfoTable.vue';
 import Products from './components/Products.vue';
-import Calendar from './components/Calendar.vue'
+import Calendar from './components/Calendar.vue';
+import DekirukotoCards from './components/DekirukotoCards.vue';
+import Questions from './components/Questions.vue';
+import Menubar from './components/Menubar.vue';
+import WelcomeTour from './components/WelcomeTour.vue'
 
 export default {
   name: 'App',
 
   components: {
-    InfoTable,
+    Menubar,
+    DekirukotoCards,
     Products,
-    Calendar
+    Calendar,
+    WelcomeTour,
+    Questions,
   },
 
   // data: () => ({

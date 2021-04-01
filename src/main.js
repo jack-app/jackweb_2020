@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
-import firebase from 'firebase'
+import vuescrollto from './plugins/vue-scrollto'
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 Vue.config.productionTip = false
 
@@ -21,5 +23,6 @@ firebase.initializeApp(firebaseConfig);
 
 new Vue({
   vuetify,
+  vuescrollto,
   render: h => h(App)
 }).$mount('#app')

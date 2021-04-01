@@ -26,6 +26,10 @@
           <div class="display-1">活動予定</div>
           <Calendar />
         </div>
+        <div class="content calendar" id="schedule">
+          <div class="display-1">見学したい方</div>
+          <WelcomeTour />
+        </div>
         <div class="content" id = "FAQ">
           <div class="display-1">よくある質問</div>
           <div class="questions-wrapper">
@@ -44,6 +48,7 @@ import DekirukotoCards from './components/DekirukotoCards.vue';
 import Questions from './components/Questions.vue';
 import Menubar from './components/Menubar.vue';
 import ActivityIntroduction from './components/ActivityIntroduction.vue';
+import WelcomeTour from './components/WelcomeTour.vue'
 
 export default {
   name: 'App',
@@ -55,6 +60,7 @@ export default {
     Products,
     Calendar,
     Questions,
+    WelcomeTour,
   },
 
   // data: () => ({

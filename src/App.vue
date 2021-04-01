@@ -1,31 +1,47 @@
 <template>
   <v-app>
-    <Menubar />
+    <v-app-bar
+              color="tranceparent"
+              src="@/assets/triangle-mosaic.png"
+              hide-on-scroll>
+      <v-btn-icon size="1">
+        <img src="@/assets/jack-logo2.png">
+      </v-btn-icon>
+      <v-spacer></v-spacer>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+    </v-app-bar>
     <v-main>
+         <header>
+          <h1 align="left">jackは <br>名古屋の <br>アプリ・ゲーム開発サークルです！</h1>
+        </header>
       <v-container>
-        <div class="content" id="can">
-          <div class="title">jackでできること</div>
-          <DekirukotoCards />
+        <div class="content">
+          <div class="display-1">団体情報</div>
+          <div class="table-wrapper">
+            <info-table />
+          </div>
         </div>
-        <div class="content" id="activity">
-          <div class="title">活動内容</div>
+        <div class="content">
+          <div class="display-1">jackでできること</div>
         </div>
-        <div class="content products" id="products">
-          <div class="products__title title">プロダクト一覧</div>
+        <div class="content">
+          <div class="display-1">活動内容</div>
+          <div class="activity">
+            <activity-introduction />
+          </div>
+        </div>
+        <div class="content products">
+          <div class="products__title display-1">プロダクト一覧</div>
           <div class="products__lists">
             <Products />
           </div>
         </div>
-        <div class="content calendar" id="schedule">
-          <h2 class="title">活動予定</h2>
+        <div class="content calendar">
+          <div class="display-1">活動予定</div>
           <Calendar />
         </div>
-        <div class="content" id="welcometour">
-          <div class="title">見学したい方</div>
-          <WelcomeTour />
-        </div>
-        <div class="content" id="FAQ">
-          <div class="title">よくある質問</div>
+        <div class="content">
+          <div class="display-1">よくある質問</div>
           <div class="questions-wrapper">
             <Questions />
           </div>
@@ -42,6 +58,11 @@ import DekirukotoCards from './components/DekirukotoCards.vue';
 import Questions from './components/Questions.vue';
 import Menubar from './components/Menubar.vue';
 import WelcomeTour from './components/WelcomeTour.vue'
+import ActivityIntroduction from './components/ActivityIntroduction.vue';
+import InfoTable from './components/InfoTable.vue';
+import Products from './components/Products.vue';
+import Calendar from './components/Calendar.vue';
+//import QuestionItem from './components/Question'//
 
 export default {
   name: 'App',
@@ -49,6 +70,8 @@ export default {
   components: {
     Menubar,
     DekirukotoCards,
+    ActivityIntroduction,
+    InfoTable,
     Products,
     Calendar,
     WelcomeTour,
@@ -72,91 +95,53 @@ export default {
   background-repeat: repeat;
 }
 
-.content {
-  margin-bottom: 5vh;
+header {
+  position: relative;
+  height: 70vh;
+  width: 100vw;
+  background: cover;
+  background-image: url("/jack-web_top.png");
+  background-size: contain;
 }
 
-.title {
+h1 {
+  color: #fff;
+  font-size: 48px;
+  line-height: 100px;
+  padding-left: 80px;
+  padding-top: 20px;
+}
+
+
+
+.content {
+  margin-bottom: 50vh;
+}
+
+.display-1 {
   position: relative;
   margin-bottom: 20px;
 }
 
-.title:before{
+.display-1:before{
   content: '';
   position: absolute;
   bottom: -5px;
   display: inline-block;
-  width: 45px;
-  height: 3px;
+  width: 100px;
+  height: 4px;
   left: 50%;
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #F29F05;
+  background-color: #F6B352;
   border-radius: 2px;
 }
+
 
 .table-wrapper {
   margin-bottom: 20px;
 }
 
-/*吹き出し*/
-.balloon_l,
-.balloon_r{
-  margin: 30px 0;
-  display:flex;
-  justify-content: flex-start;
-  align-items: flex-start; /*縦位置を上揃え*/
-/*   align-items: center; */ /*縦位置を真ん中揃え*/
-}
-.balloon_r{
-  justify-content:flex-end;
-}
-.faceicon img{
-  width: 80px; /*任意のサイズ*/
-  height: auto;
-}
-.balloon_r .faceicon{
-  margin-left:25px;
-}
-.balloon_l .faceicon{
-  margin-right:25px;
-}
-.balloon_r .faceicon{
-  order:2 !important;
-}
-.says {
-  max-width:500px; /*最大幅は任意*/
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 17px 13px 15px 18px;
-  border-radius: 12px;
-  background: #FFCC80;/*色は任意*/
-  box-sizing:border-box;
-  margin:20px !important;
-  line-height:1.5;
-/*   align-items: center; */
-}
-.says p{
-  margin:8px 0 0 !important;
-}
-.says p:first-child{
-  margin-top:0 !important;
-}
-.says:after {
-  content: "";
-  position: absolute;
-  border: 10px solid transparent;
-/*   margin-top:-3px;  */
-}
-.balloon_l .says:after {
-  left: -26px;
-  border-right: 22px solid #FFCC80;
-}
-.balloon_r .says:after {
-  right: -26px;
-  border-left: 22px solid #FFCC80;
-}
 </style>

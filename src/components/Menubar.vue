@@ -1,12 +1,14 @@
 <template>
-  <header>
+  <div>
     <v-app-bar
       clipped-right
       color="tranceparent"
       src="@/assets/triangle-mosaic.png"
       hide-on-scroll
       >
-      <v-toolbar-title>jack</v-toolbar-title>
+      <!--<v-btn-icon size="1">
+        <img src="@/assets/jack-logo2.png">
+      </v-btn-icon>-->
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon @click = "drawer = true"></v-app-bar-nav-icon>
     </v-app-bar>
@@ -38,7 +40,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-  </header>
+  </div>
 </template>
 
 <script>

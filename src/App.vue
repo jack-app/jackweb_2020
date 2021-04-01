@@ -1,46 +1,32 @@
 <template>
   <v-app>
-    <v-app-bar
-              color="tranceparent"
-              src="@/assets/triangle-mosaic.png"
-              hide-on-scroll>
-      <v-btn-icon size="1">
-        <img src="@/assets/jack-logo2.png">
-      </v-btn-icon>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-    </v-app-bar>
+    <Menubar />
     <v-main>
          <header>
           <h1 align="left">jackは <br>名古屋の <br>アプリ・ゲーム開発サークルです！</h1>
         </header>
       <v-container>
-        <div class="content">
-          <div class="display-1">団体情報</div>
-          <div class="table-wrapper">
-            <info-table />
-          </div>
+        <div class="content" id="can">
+          <div class="display-1" >jackでできること</div>
+          <DekirukotoCards />
         </div>
-        <div class="content">
-          <div class="display-1">jackでできること</div>
-        </div>
-        <div class="content">
+        <div class="content" id = "activity">
           <div class="display-1">活動内容</div>
-          <div class="activity">
+          <div class="activity" >
             <activity-introduction />
           </div>
         </div>
-        <div class="content products">
+        <div class="content products" id = "products">
           <div class="products__title display-1">プロダクト一覧</div>
           <div class="products__lists">
             <Products />
           </div>
         </div>
-        <div class="content calendar">
+        <div class="content calendar" id="schedule">
           <div class="display-1">活動予定</div>
           <Calendar />
         </div>
-        <div class="content">
+        <div class="content" id = "FAQ">
           <div class="display-1">よくある質問</div>
           <div class="questions-wrapper">
             <Questions />
@@ -57,12 +43,7 @@ import Calendar from './components/Calendar.vue';
 import DekirukotoCards from './components/DekirukotoCards.vue';
 import Questions from './components/Questions.vue';
 import Menubar from './components/Menubar.vue';
-import WelcomeTour from './components/WelcomeTour.vue'
 import ActivityIntroduction from './components/ActivityIntroduction.vue';
-import InfoTable from './components/InfoTable.vue';
-import Products from './components/Products.vue';
-import Calendar from './components/Calendar.vue';
-//import QuestionItem from './components/Question'//
 
 export default {
   name: 'App',
@@ -71,10 +52,8 @@ export default {
     Menubar,
     DekirukotoCards,
     ActivityIntroduction,
-    InfoTable,
     Products,
     Calendar,
-    WelcomeTour,
     Questions,
   },
 

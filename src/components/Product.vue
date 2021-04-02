@@ -20,7 +20,6 @@
       <img class="badgeimage" src="@/assets/app-store-badge.svg" />
     </a>
   </div>
-
 </div>
 </template>
 
@@ -32,7 +31,7 @@ export default {
 
 <style scoped>
 .product {
-  width: 20%;
+  width: 100%;
   padding: 15px 10px;
   margin: 5% 0;
 }

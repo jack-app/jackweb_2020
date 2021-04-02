@@ -15,6 +15,15 @@
 
 <p>jackのメンバーが作ったアプリやゲームを楽しく紹介します！
 ぜひぜひご参加ください！</p>
+<div class="accessbutton">
+  <v-btn
+    rounded
+    color="#FC913A"
+    class="white--text"
+  >
+    <v-icon>mdi-open-in-new</v-icon>お申し込みはこちら
+  </v-btn>
+</div>
 
 </div>
 </template>
@@ -28,5 +37,10 @@
   width: 80%;
   margin: 0 auto;
   text-align: left;
+}
+
+.accessbutton{
+  margin: 0 auto;
+  text-align: center;
 }
 </style>

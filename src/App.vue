@@ -26,7 +26,7 @@
           <div class="display-1">活動予定</div>
           <Calendar />
         </div>
-        <div class="content calendar" id="schedule">
+        <div class="content" id="welcometour">
           <div class="display-1">見学したい方</div>
           <WelcomeTour />
         </div>
@@ -84,6 +84,7 @@ header {
   position: relative;
   height: 70vh;
   width: 100vw;
+  margin-top: 5%;
   background: cover;
   background-image: url("/jack-web_top.png");
   background-size: contain;
@@ -100,7 +101,7 @@ h1 {
 
 
 .content {
-  margin-bottom: 50vh;
+  margin-bottom: 10vh;
 }
 
 .display-1 {

@@ -3,7 +3,7 @@
     <v-app-bar
       clipped-right
       color="tranceparent"
-      src="@/assets/triangle-mosaic.png"
+      fixed
       hide-on-scroll
       >
       <!--<v-btn-icon size="1">
@@ -17,18 +17,16 @@
       right
       temporary
       clipped
-      absolute
+      fixed
       >
-      <v-list-item>
-        <v-list-item-title class="listtitle">
-           Application
-        </v-list-item-title>
+      <div class="listicon">
         <v-btn icon @click = "drawer = false">
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
-      </v-list-item>
+      </div>
       <v-list
         nav
+        flat
         >
         <v-list-item-group>
           <v-list-item
@@ -72,6 +70,13 @@ export default {
 }
 </script>
 
+
+
 <style scoped>
+.listicon{
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 5%
+}
 
 </style>

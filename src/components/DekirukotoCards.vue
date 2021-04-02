@@ -1,11 +1,22 @@
 <template>
   <div class="card-container">
-    <DekirukotoCard v-for = "content in contents"
-      :key ="content.id"
-      :icon="content.icon"
-      :title="content.title"
-      :text="content.text"
-    />
+    <v-container>
+      <v-row>
+        <v-col cols="12" sm="6" md="3" v-for = "content in contents"
+          :key ="content.id"
+          :icon="content.icon"
+          :title="content.title"
+          :text="content.text"
+        >
+          <DekirukotoCard
+            :key ="content.id"
+            :icon="content.icon"
+            :title="content.title"
+            :text="content.text"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

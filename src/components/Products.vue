@@ -1,13 +1,18 @@
 <template>
   <div class="product-container">
-    <Product v-for = "product in products"
-      :key ="product.name"
-      :icon="product.icon"
-      :name="product.name"
-      :ios="product.ios"
-      :android="product.android"
-      :web="product.web"
-    />
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="6" sm="4" md="" v-for="n in 5" :key ="n">
+          <Product
+          :icon="products[n-1].icon"
+          :name="products[n-1].name"
+          :ios="products[n-1].ios"
+          :android="products[n-1].android"
+          :web="products[n-1].web"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -49,9 +54,5 @@ export default {
 </script>
 
 <style scoped>
-.product-container{
-  display: flex;
-  width:80%;
-  margin: 0 auto;
-}
+
 </style>

@@ -32,8 +32,6 @@ export default {
 <style scoped>
 .product {
   width: 100%;
-  padding: 15px 10px;
-  margin: 5% 0;
 }
 
 .productimage {

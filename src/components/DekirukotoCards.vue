@@ -2,17 +2,14 @@
   <div class="card-container">
     <v-container>
       <v-row>
-        <v-col cols="12" sm="6" md="3" v-for = "content in contents"
-          :key ="content.id"
-          :icon="content.icon"
-          :title="content.title"
-          :text="content.text"
+        <v-col cols="12" sm="6" md="3" v-for = "n in 4"
+          :key ="n"
         >
           <DekirukotoCard
-            :key ="content.id"
-            :icon="content.icon"
-            :title="content.title"
-            :text="content.text"
+            :key ="contents[n-1].id"
+            :icon="contents[n-1].icon"
+            :title="contents[n-1].title"
+            :text="contents[n-1].text"
           />
         </v-col>
       </v-row>
@@ -58,7 +55,6 @@ export default {
 <style scoped>
 .card-container{
   display: flex;
-  width: 85%;
-  margin: 0 auto;
+
 }
 </style>

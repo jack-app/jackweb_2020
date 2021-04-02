@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .card-container{
   display: flex;
-  width:80%;
+  width: 85%;
   margin: 0 auto;
 }
 </style>

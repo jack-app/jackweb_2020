@@ -15,7 +15,7 @@
      </div>
        <div class="f-container">
          <div class="flexitem item3">
-           <v-img max-height="300" max-width="480" src="@/assets/test.png"></v-img>
+           <v-img max-height="300" max-width="480" src="@/assets/event.png"></v-img>
          </div>
          <div class="flexitem item4">
            <div class="headline" align="left">イベント</div>
@@ -32,10 +32,6 @@
 </template>
 
 <style scoped>
-.activity{
-  margin-top: 6vh;
-}
-
  .headline{
   border-bottom: solid 2px #F6B352;
   padding-left:20px;

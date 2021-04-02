@@ -4,6 +4,7 @@
       clipped-right
       color="#FC913A"
       hide-on-scroll
+      fixed
       dark
       >
       <v-btn-icon size="1">

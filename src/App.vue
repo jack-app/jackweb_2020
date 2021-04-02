@@ -2,9 +2,9 @@
   <v-app>
     <Menubar />
     <v-main>
-         <header>
+         <div class="top">
           <h1 align="left">jackは <br>名古屋の <br>アプリ・ゲーム開発サークルです！</h1>
-        </header>
+        </div>
       <v-container>
         <div class="content" id="can">
           <div class="display-1" >jackでできること</div>
@@ -80,7 +80,7 @@ export default {
   background-repeat: repeat;
 }
 
-header {
+.top {
   position: relative;
   height: 70vh;
   width: 100vw;
@@ -100,12 +100,14 @@ h1 {
 
 
 .content {
-  margin-bottom: 50vh;
+  margin: 0 auto;
+  margin-bottom: 20vh;
+  max-width: 75vw;
 }
 
 .display-1 {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 6vh;
 }
 
 .display-1:before{

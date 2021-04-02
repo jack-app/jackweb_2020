@@ -6,10 +6,25 @@
           :key="content.asktext"
         >
           <v-expansion-panel-header>
-            {{content.asktext}}
+            <v-avatar color="white" size="20">
+            <span class="orange--text headline" color="#FC913A">Q.</span>
+            </v-avatar>
+            <div>
+              {{content.asktext}}
+            </div>
+            <template v-slot:actions>
+              <v-icon color="#FC913A">
+                $expand
+              </v-icon>
+            </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            {{content.anstext}}
+            <v-avatar color="white" size="28">
+            <span class="orange--text headline" color="#FC913A">A.</span>
+            </v-avatar>
+            <div>
+              {{content.anstext}}
+            </div>
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
@@ -21,11 +36,11 @@ export default {
   data: ()=> ({
     contents:[
       {
-        asktext:"未経験でも大丈夫ですか",
+        asktext:"未経験でも大丈夫ですか？",
         anstext:"大丈夫です！　多くのjackメンバーが初心者の状態で加入しています。",
       },{
         asktext:"jackに入るのに何か条件はありますか？",
-        anstext:"もちろん2年生からでも加入できます！　実際、2年生から加入したメンバーもたくさんいます。",
+        anstext:"もちろん2年生からでも加入できます！ \r\n 実際、2年生から加入したメンバーもたくさんいます。",
       },{
         asktext:"２年生からでも入れますか？",
         anstext:"もちろん２年生からでも加入できます！",
@@ -68,5 +83,9 @@ export default {
 .faq-container div{
   width: 80%;
   margin: 0 auto;
+  text-align: left;
+}
+.v-avatar{
+  display:
 }
 </style>

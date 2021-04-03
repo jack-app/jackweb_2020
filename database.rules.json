@@ -4,7 +4,7 @@
     ".write": false,
     "products": {
       ".read": true,
-      ".write": true
+      ".write": false
     }
   }
 }

@@ -89,6 +89,6 @@ export default {
   display:
 }
 .answer{
-  margin: 0 !important;
+  margin: 0;
 }
 </style>

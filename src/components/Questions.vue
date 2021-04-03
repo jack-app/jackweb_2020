@@ -6,7 +6,7 @@
           :key="content.asktext"
         >
           <v-expansion-panel-header>
-            <v-avatar color="white" size="20">
+            <v-avatar color="white" size="30">
             <span class="orange--text headline" color="#FC913A">Q.</span>
             </v-avatar>
             <div>
@@ -19,7 +19,7 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-avatar color="white" size="28">
+            <v-avatar class="answer" color="white" size="48">
             <span class="orange--text headline" color="#FC913A">A.</span>
             </v-avatar>
             <div>
@@ -87,5 +87,8 @@ export default {
 }
 .v-avatar{
   display:
+}
+.answer{
+  margin: 0;
 }
 </style>

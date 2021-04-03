@@ -6,7 +6,7 @@
           :key="content.asktext"
         >
           <v-expansion-panel-header>
-            <v-avatar color="white" size="30">
+            <v-avatar color="white" size="32">
             <span class="orange--text headline" color="#FC913A">Q.</span>
             </v-avatar>
             <div>

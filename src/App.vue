@@ -36,6 +36,9 @@
         </div>
       </v-container>
     </v-main>
+    <footer>
+      2021 © jack
+    </footer>
   </v-app>
 </template>
 

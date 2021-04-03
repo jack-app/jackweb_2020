@@ -4,6 +4,7 @@ import vuetify from './plugins/vuetify';
 import vuescrollto from './plugins/vue-scrollto'
 import firebase from 'firebase/app';
 import 'firebase/database';
+import 'firebase/analytics';
 
 Vue.config.productionTip = false
 
@@ -15,11 +16,12 @@ var firebaseConfig = {
   projectId: "jack-web2020",
   storageBucket: "jack-web2020.appspot.com",
   messagingSenderId: "339661154580",
-  appId: "1:339661154580:web:15dfdfa98884bd0032fa01"
+  appId: "1:339661154580:web:15dfdfa98884bd0032fa01",
+  measurementId: "G-ET9VVLVN19",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
+firebase.analytics();
 
 new Vue({
   vuetify,

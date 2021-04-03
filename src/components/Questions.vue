@@ -40,7 +40,7 @@ export default {
         anstext:"大丈夫です！　多くのjackメンバーが初心者の状態で加入しています。",
       },{
         asktext:"jackに入るのに何か条件はありますか？",
-        anstext:"もちろん2年生からでも加入できます！ \r\n 実際、2年生から加入したメンバーもたくさんいます。",
+        anstext:"もちろん2年生からでも加入できます！ 実際、2年生から加入したメンバーもたくさんいます。",
       },{
         asktext:"２年生からでも入れますか？",
         anstext:"もちろん２年生からでも加入できます！",
@@ -85,9 +85,7 @@ export default {
   margin: 0 auto;
   text-align: left;
 }
-.v-avatar{
-  display:
-}
+
 .answer{
   margin: 0 !important;
 }

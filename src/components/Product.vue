@@ -40,7 +40,6 @@ export default {
 
 .badges {
   margin-top: 25%;
-  /*display: flex;*/
   justify-content: space-around;
 }
 

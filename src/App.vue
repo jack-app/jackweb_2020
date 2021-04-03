@@ -80,9 +80,6 @@ export default {
   background-repeat: repeat;
 }
 
-
-
-
 .content {
   margin: 0 auto;
   margin-bottom: 20vh;

@@ -91,6 +91,7 @@ export default {
 
 .display-1 {
   position: relative;
+  margin-top: 10vh;
   margin-bottom: 6vh;
 }
 

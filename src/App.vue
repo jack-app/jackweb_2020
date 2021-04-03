@@ -2,9 +2,7 @@
   <v-app>
     <Menubar />
     <v-main>
-         <div class="top">
-          <h1 align="left">jackは <br>名古屋の <br>アプリ・ゲーム開発サークルです！</h1>
-        </div>
+      <Top />
       <v-container>
         <div class="content" id="can">
           <div class="display-1" >jackでできること</div>
@@ -27,7 +25,7 @@
           <Calendar />
         </div>
         <div class="content" id="welcometour">
-          <div class="display-1">見学したい方</div>
+          <div class="display-1">新歓2021</div>
           <WelcomeTour />
         </div>
         <div class="content" id = "FAQ">
@@ -42,6 +40,7 @@
 </template>
 
 <script>
+import Top from './components/Top.vue'
 import Products from './components/Products.vue';
 import Calendar from './components/Calendar.vue';
 import DekirukotoCards from './components/DekirukotoCards.vue';
@@ -54,6 +53,7 @@ export default {
   name: 'App',
 
   components: {
+    Top,
     Menubar,
     DekirukotoCards,
     ActivityIntroduction,
@@ -80,23 +80,6 @@ export default {
   background-repeat: repeat;
 }
 
-.top {
-  position: relative;
-  height: 70vh;
-  width: 100vw;
-  margin-top: 5%;
-  background: cover;
-  background-image: url("/jack-web_top.png");
-  background-size: contain;
-}
-
-h1 {
-  color: #fff;
-  font-size: 48px;
-  line-height: 100px;
-  padding-left: 80px;
-  padding-top: 20px;
-}
 
 
 

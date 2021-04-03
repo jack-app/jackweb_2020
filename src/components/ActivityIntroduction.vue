@@ -1,7 +1,7 @@
 <template>
  <v-container>
    <v-row align="center">
-     <v-col cols="12" md="5">
+     <v-col cols="12" md="6">
        <div class="flexitem item1">
           <div class="headline" align="left">通常活動</div>
               <div class="body-1" align="left">
@@ -10,19 +10,19 @@
               </div>
         </div>
      </v-col>
-     <v-col cols="12" md="7">
+     <v-col cols="12" md="6">
        <div class="flexitem item2">
-         <v-img max-height="300" max-width="480" src="@/assets/activity.png"></v-img>
+         <v-img src="@/assets/activity.png"></v-img>
        </div>
      </v-col>
    </v-row>
    <v-row align="center">
-     <v-col cols="12" md="7" order="last" order-md="first">
+     <v-col cols="12" md="6" order="last" order-md="first">
        <div class="flexitem item3">
-         <v-img max-height="300" max-width="480" src="@/assets/event.png"></v-img>
+         <v-img src="@/assets/event.png"></v-img>
        </div>
      </v-col>
-     <v-col cols="12" md="5"  order="first" order-md="last">
+     <v-col cols="12" md="6"  order="first" order-md="last">
        <div class="flexitem item4">
          <div class="headline" align="left">イベント</div>
             <div class="body-1" align="left">

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <v-app-bar
       clipped-right
       color="#FC913A"
@@ -39,7 +39,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -61,7 +61,7 @@ export default {
         name:"活動予定"
       },{
         id:'#welcometour',
-        name:"見学したい方"
+        name:"新歓2021"
       },{
         id:'#FAQ',
         name:"よくある質問"

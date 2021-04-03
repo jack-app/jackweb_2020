@@ -31,6 +31,8 @@
               rounded
               color="#FC913A"
               class="white--text"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe0089tlqgkMn8nYkNaEhPyMdbtOvEUkiQ09dPx_rloLxepBg/viewform?usp=sf_link"
+              target="_blank"
               >
               <v-icon>mdi-open-in-new</v-icon>お申し込みはこちら
             </v-btn>

@@ -7,9 +7,9 @@
       fixed
       dark
       >
-      <v-btn-icon size="1">
+      <v-btn icon size="1">
         <img src="@/assets/jack-logo.png">
-      </v-btn-icon>
+      </v-btn>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon @click = "drawer = true"></v-app-bar-nav-icon>
     </v-app-bar>

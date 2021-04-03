@@ -4,11 +4,11 @@
       <v-row justify="center">
         <v-col cols="6" sm="4" md="" v-for="n in 5" :key ="n">
           <Product
-          :icon="products[n-1].icon"
-          :name="products[n-1].name"
-          :ios="products[n-1].ios"
-          :android="products[n-1].android"
-          :web="products[n-1].web"
+            :icon="products[n-1].icon"
+            :name="products[n-1].name"
+            :ios="products[n-1].ios"
+            :android="products[n-1].android"
+            :web="products[n-1].web"
           />
         </v-col>
       </v-row>

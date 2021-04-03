@@ -25,14 +25,7 @@ export default {
     Product
   },
   data: ()=> ({
-    products:[
-    /*{
-        name:"Qroon",
-        ios:"https://apps.apple.com/us/app/qroon/id1354363903?l=ja",
-        android:"https://play.google.com/store/apps/details?id=tmy.jack.Qroon",
-        web:"https://jack-web.herokuapp.com/products"
-      }*/
-    ]
+    products: []
   }),
   created (){
     let ls = firebase.database().ref('products');

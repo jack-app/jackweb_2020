@@ -42,10 +42,6 @@
 </div>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
 .tour-container{
   width: 80%;
@@ -83,14 +79,14 @@
 }
 
 @media screen and (max-width: 800px) {
-        .tour-container {
-          display: block;
-        }
-      }
+  .tour-container {
+    display: block;
+  }
+}
 
 @media screen and (max-width: 400px) {
-        .v-btn {
-          max-width:70vw;
-        }
-      }
+  .v-btn {
+    max-width:70vw;
+  }
+}
 </style>

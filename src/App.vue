@@ -80,9 +80,6 @@ export default {
   background-repeat: repeat;
 }
 
-
-
-
 .content {
   margin: 0 auto;
   margin-bottom: 20vh;
@@ -91,6 +88,7 @@ export default {
 
 .display-1 {
   position: relative;
+  margin-top: 10vh;
   margin-bottom: 6vh;
 }
 

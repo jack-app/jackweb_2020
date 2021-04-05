@@ -55,6 +55,5 @@ export default {
 <style scoped>
 .card-container{
   display: flex;
-
 }
 </style>

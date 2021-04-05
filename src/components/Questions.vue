@@ -6,11 +6,13 @@
           :key="content.asktext"
         >
           <v-expansion-panel-header>
-            <v-avatar color="white" size="32">
-            <span class="orange--text headline" color="#FC913A">Q.</span>
-            </v-avatar>
-            <div>
-              {{content.asktext}}
+            <div class="question">
+              <v-avatar class="question-avater" color="white" size="32">
+              <span class="orange--text headline" color="#FC913A">Q.</span>
+              </v-avatar>
+              <div class="question-item">
+                {{content.asktext}}
+              </div>
             </div>
             <template v-slot:actions>
               <v-icon color="#FC913A">
@@ -19,10 +21,10 @@
             </template>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            <v-avatar class="answer" color="white" size="48">
+            <v-avatar class="answer-avater" color="white" size="48">
             <span class="orange--text headline" color="#FC913A">A.</span>
             </v-avatar>
-            <div>
+            <div class="answer-item">
               {{content.anstext}}
             </div>
           </v-expansion-panel-content>
@@ -37,7 +39,7 @@ export default {
     contents:[
       {
         asktext:"未経験でも大丈夫ですか？",
-        anstext:"大丈夫です！　多くのjackメンバーが初心者の状態で加入しています。",
+        anstext:"大丈夫です！ 多くのjackメンバーが初心者の状態で加入しています。",
       },{
         asktext:"jackに入るのに何か条件はありますか？",
         anstext:"もちろん2年生からでも加入できます！ 実際、2年生から加入したメンバーもたくさんいます。",
@@ -80,13 +82,61 @@ export default {
 </script>
 
 <style scoped>
-.faq-container div{
-  width: 80%;
+.faq-container{
   margin: 0 auto;
   text-align: left;
 }
 
-.answer{
+.question{
+  display: flex;
+  position: relative;
+}
+
+.question-avater{
   margin: 0 !important;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.question-item{
+  margin: 0 !important;
+  font-size: 1.2em !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 6em;
+}
+
+.answer-avaer{
+  margin: 0 !important;
+}
+
+.answer-item{
+  padding-left: 4em;
+}
+
+@media screen and (max-width: 800px) {
+  .faq-container {
+  width:  80%;
+  }
+  .question-item {
+  font-size: 1em !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .faq-container {
+  width:  100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .question-avater {
+  padding-left: 1.6em;
+  padding-right: 2em;
+  }
+  .question-item {
+  padding-left: 4em;
+  }
 }
 </style>

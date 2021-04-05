@@ -32,7 +32,7 @@ export default {
 <style scoped>
 .card {
   width:100%;
-  margin: 0 10px;
+  margin: 0 auto;
 }
 .cardimg{
   width: 100%;

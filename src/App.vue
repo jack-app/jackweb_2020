@@ -40,6 +40,9 @@
           </v-col>
       </v-row>
     </v-main>
+    <footer>
+      2021 © jack
+    </footer>
   </v-app>
 </template>
 

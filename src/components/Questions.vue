@@ -1,36 +1,36 @@
 <template>
-<div class='faq-container'>
-  <v-expansion-panels accordion>
-        <v-expansion-panel
-          v-for="content in contents"
-          :key="content.asktext"
+  <div class='faq-container'>
+    <v-expansion-panels accordion>
+      <v-expansion-panel
+        v-for="content in contents"
+        :key="content.asktext"
         >
-          <v-expansion-panel-header>
-            <div class="question">
-              <v-avatar class="question-avater" color="white" size="32">
-              <span class="orange--text headline" color="#FC913A">Q.</span>
-              </v-avatar>
-              <div class="question-item">
-                {{content.asktext}}
-              </div>
-            </div>
-            <template v-slot:actions>
-              <v-icon color="#FC913A">
-                $expand
-              </v-icon>
-            </template>
-          </v-expansion-panel-header>
-          <v-expansion-panel-content>
-            <v-avatar class="answer-avater" color="white" size="48">
-            <span class="orange--text headline" color="#FC913A">A.</span>
+        <v-expansion-panel-header>
+          <div class="question">
+            <v-avatar class="question-avater" color="white" size="32">
+            <span class="orange--text headline" color="#FC913A">Q.</span>
             </v-avatar>
-            <div class="answer-item">
-              {{content.anstext}}
+            <div class="question-item">
+              {{content.asktext}}
             </div>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-</div>
+          </div>
+          <template v-slot:actions>
+            <v-icon color="#FC913A">
+              $expand
+            </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-avatar class="answer-avater" color="white" size="48">
+          <span class="orange--text headline" color="#FC913A">A.</span>
+          </v-avatar>
+          <div class="answer-item">
+            {{content.anstext}}
+          </div>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+  </div>
 </template>
 
 <script>
@@ -85,6 +85,7 @@ export default {
 .faq-container{
   margin: 0 auto;
   text-align: left;
+  width: 100%;
 }
 
 .question{
@@ -116,27 +117,18 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-  .faq-container {
-  width:  80%;
-  }
   .question-item {
-  font-size: 1em !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .faq-container {
-  width:  100%;
+    font-size: 1em !important;
   }
 }
 
 @media screen and (max-width: 450px) {
   .question-avater {
-  padding-left: 1.6em;
-  padding-right: 2em;
+    padding-left: 1.6em;
+    padding-right: 2em;
   }
   .question-item {
-  padding-left: 4em;
+    padding-left: 4em;
   }
 }
 </style>

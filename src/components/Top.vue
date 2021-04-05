@@ -1,14 +1,14 @@
 <template>
   <div class="top">
     <v-img
-     src="@/assets/jack-web_top.png"
-     contain
-     >
-       <div class="toptext">
-         <h1 align="left">jackは</h1>
-         <h1 align="left">名古屋の</h1>
-         <h1 align="left">アプリ・ゲーム</h1>
-         <h1 align="left">開発サークルです！</h1>
+      src="@/assets/jack-web_top.png"
+      contain
+      >
+      <div class="toptext">
+        <h1 align="left">jackは</h1>
+        <h1 align="left">名古屋の</h1>
+        <h1 align="left">アプリ・ゲーム</h1>
+        <h1 align="left">開発サークルです！</h1>
       </div>
     </v-img>
   </div>
@@ -20,6 +20,7 @@
   padding-top: 0;
   width: 100%;
 }
+
 .toptext{
   padding-top: 56px;
 }
@@ -37,7 +38,6 @@ h1 {
     line-height: 60px;
   }
 }
-
 
 @media screen and (max-width: 640px) {
   h1 {
@@ -71,7 +71,4 @@ h1 {
     line-height: 20px;
   }
 }
-
-
-
 </style>

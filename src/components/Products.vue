@@ -2,7 +2,7 @@
   <div class="product-container">
     <v-container>
       <v-row justify="center">
-        <v-col cols="6" sm="4" md="" v-for="n in 5" :key ="n">
+        <v-col cols="6" sm="4" md="" v-for="n in 5" :key ="n" align="center">
           <Product
             :icon="products[n-1].icon"
             :name="products[n-1].name"
@@ -45,7 +45,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

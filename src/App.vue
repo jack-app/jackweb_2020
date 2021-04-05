@@ -3,42 +3,38 @@
     <Menubar />
     <v-main>
       <Top />
-      <v-row>
-        <v-col>
-          <v-container class="contents">
-            <div class="content" id="can">
-              <div class="display-1" >jackでできること</div>
-              <DekirukotoCards />
-            </div>
-            <div class="content" id = "activity">
-              <div class="display-1">活動内容</div>
-              <div class="activity" >
-                <activity-introduction />
-              </div>
-            </div>
-            <div class="content products" id = "products">
-              <div class="products__title display-1">プロダクト一覧</div>
-              <div class="products__lists">
-                <Products />
-              </div>
-            </div>
-            <div class="content calendar" id="schedule">
-              <div class="display-1">活動予定</div>
-              <Calendar />
-            </div>
-            <div class="content" id="welcometour">
-              <div class="display-1">新歓2021</div>
-              <WelcomeTour />
-            </div>
-            <div class="content" id = "FAQ">
-              <div class="display-1">よくある質問</div>
-              <div class="questions-wrapper">
-                <Questions />
-              </div>
-            </div>
-          </v-container>
-          </v-col>
-      </v-row>
+      <div class="contents">
+        <div class="content" id="can">
+          <div class="display-1" >jackでできること</div>
+          <DekirukotoCards />
+        </div>
+        <div class="content" id = "activity">
+          <div class="display-1">活動内容</div>
+          <div class="activity" >
+            <activity-introduction />
+          </div>
+        </div>
+        <div class="content products" id = "products">
+          <div class="products__title display-1">プロダクト一覧</div>
+          <div class="products__lists">
+            <Products />
+          </div>
+        </div>
+        <div class="content calendar" id="schedule">
+          <div class="display-1">活動予定</div>
+          <Calendar />
+        </div>
+        <div class="content" id="welcometour">
+          <div class="display-1">新歓2021</div>
+          <WelcomeTour />
+        </div>
+        <div class="content" id = "FAQ">
+          <div class="display-1">よくある質問</div>
+          <div class="questions-wrapper">
+            <Questions />
+          </div>
+        </div>
+      </div>
     </v-main>
     <footer>
       2021 © jack
@@ -116,15 +112,14 @@ export default {
   margin: 0 auto !important;
 }
 
-@media screen and (max-width: 800px) {
-  .contents {
-  max-width:  75vw;
-  }
+.contents {
+  width:  75%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
   .contents {
-  max-width:  100%;
+  width:  90%;
   }
 }
 </style>

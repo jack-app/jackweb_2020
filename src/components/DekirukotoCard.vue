@@ -18,15 +18,12 @@
       </v-row>
     </v-container>
   </v-card>
-
 </template>
 
 <script>
 export default {
   props: ['icon','title','text'],
 }
-
-
 </script>
 
 <style scoped>
@@ -34,6 +31,7 @@ export default {
   width:100%;
   margin: 0 auto;
 }
+
 .cardimg{
   width: 100%;
 }

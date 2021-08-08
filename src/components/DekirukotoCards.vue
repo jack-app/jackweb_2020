@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" sm="6" md="3" v-for = "n in 4"
           :key ="n"
-        >
+          >
           <DekirukotoCard
             :key ="contents[n-1].id"
             :icon="contents[n-1].icon"
@@ -55,6 +55,5 @@ export default {
 <style scoped>
 .card-container{
   display: flex;
-
 }
 </style>

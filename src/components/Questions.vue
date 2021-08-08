@@ -1,34 +1,36 @@
 <template>
-<div class='faq-container'>
-  <v-expansion-panels accordion>
-        <v-expansion-panel
-          v-for="content in contents"
-          :key="content.asktext"
+  <div class='faq-container'>
+    <v-expansion-panels accordion>
+      <v-expansion-panel
+        v-for="content in contents"
+        :key="content.asktext"
         >
-          <v-expansion-panel-header>
-            <v-avatar color="white" size="32">
+        <v-expansion-panel-header>
+          <div class="question">
+            <v-avatar class="question-avater" color="white" size="32">
             <span class="orange--text headline" color="#FC913A">Q.</span>
             </v-avatar>
-            <div>
+            <div class="question-item">
               {{content.asktext}}
             </div>
-            <template v-slot:actions>
-              <v-icon color="#FC913A">
-                $expand
-              </v-icon>
-            </template>
-          </v-expansion-panel-header>
-          <v-expansion-panel-content>
-            <v-avatar class="answer" color="white" size="48">
-            <span class="orange--text headline" color="#FC913A">A.</span>
-            </v-avatar>
-            <div>
-              {{content.anstext}}
-            </div>
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
-</div>
+          </div>
+          <template v-slot:actions>
+            <v-icon color="#FC913A">
+              $expand
+            </v-icon>
+          </template>
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-avatar class="answer-avater" color="white" size="48">
+          <span class="orange--text headline" color="#FC913A">A.</span>
+          </v-avatar>
+          <div class="answer-item">
+            {{content.anstext}}
+          </div>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+  </div>
 </template>
 
 <script>
@@ -80,13 +82,53 @@ export default {
 </script>
 
 <style scoped>
-.faq-container div{
-  width: 80%;
+.faq-container{
   margin: 0 auto;
   text-align: left;
+  width: 100%;
 }
 
-.answer{
+.question{
+  display: flex;
+  position: relative;
+}
+
+.question-avater{
   margin: 0 !important;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.question-item{
+  margin: 0 !important;
+  font-size: 1.2em !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 6em;
+}
+
+.answer-avaer{
+  margin: 0 !important;
+}
+
+.answer-item{
+  padding-left: 4em;
+}
+
+@media screen and (max-width: 800px) {
+  .question-item {
+    font-size: 1em !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .question-avater {
+    padding-left: 1.6em;
+    padding-right: 2em;
+  }
+  .question-item {
+    padding-left: 4em;
+  }
 }
 </style>

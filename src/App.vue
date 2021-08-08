@@ -3,7 +3,7 @@
     <Menubar />
     <v-main>
       <Top />
-      <v-container>
+      <div class="contents">
         <div class="content" id="can">
           <div class="display-1" >jackでできること</div>
           <DekirukotoCards />
@@ -34,8 +34,11 @@
             <Questions />
           </div>
         </div>
-      </v-container>
+      </div>
     </v-main>
+    <footer>
+      2021 © jack
+    </footer>
   </v-app>
 </template>
 
@@ -63,8 +66,6 @@ export default {
     WelcomeTour,
   },
 
-  // data: () => ({
-  // }),
 };
 </script>
 
@@ -83,7 +84,6 @@ export default {
 .content {
   margin: 0 auto;
   margin-bottom: 20vh;
-  max-width: 75vw;
 }
 
 .display-1 {
@@ -108,9 +108,18 @@ export default {
   border-radius: 2px;
 }
 
-
-.table-wrapper {
-  margin-bottom: 20px;
+.questions-wrapper{
+  margin: 0 auto !important;
 }
 
+.contents {
+  width:  75%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .contents {
+  width:  90%;
+  }
+}
 </style>

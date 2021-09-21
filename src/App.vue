@@ -25,7 +25,7 @@
           <Calendar />
         </div>
         <div class="content" id="welcometour">
-          <div class="display-1">新歓2021</div>
+          <div class="display-1">見学お申し込み</div>
           <WelcomeTour />
         </div>
         <div class="content" id = "FAQ">
@@ -50,7 +50,7 @@ import DekirukotoCards from './components/DekirukotoCards.vue';
 import Questions from './components/Questions.vue';
 import Menubar from './components/Menubar.vue';
 import ActivityIntroduction from './components/ActivityIntroduction.vue';
-import WelcomeTour from './components/WelcomeTour.vue'
+import WelcomeTour from './components/WelcomeTour2.vue'
 
 export default {
   name: 'App',

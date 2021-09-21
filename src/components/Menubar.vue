@@ -61,7 +61,7 @@ export default {
         name:"活動予定"
       },{
         id:'#welcometour',
-        name:"新歓2021"
+        name:"見学お申し込み"
       },{
         id:'#FAQ',
         name:"よくある質問"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>作品一覧</p>
+    <p>お問い合わせ</p>
   </div>
 </template>
 

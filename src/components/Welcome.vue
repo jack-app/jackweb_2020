@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>作品一覧</p>
+    <p>見学者向けページ</p>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 import vuetify from './plugins/vuetify';
 import vuescrollto from './plugins/vue-scrollto'
 import firebase from 'firebase/app';
@@ -26,5 +27,6 @@ firebase.analytics();
 new Vue({
   vuetify,
   vuescrollto,
+  router,
   render: h => h(App)
 }).$mount('#app')

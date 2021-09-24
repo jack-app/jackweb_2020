@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>作品一覧</p>
+    <p>活動内容</p>
+    <p>jack</p>
   </div>
 </template>
 

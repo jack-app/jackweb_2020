@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p>作品一覧</p>
-  </div>
+  <footer>
+    <p>footer</p>
+  </footer>
 </template>
 
 <script>

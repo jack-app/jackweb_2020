@@ -57,10 +57,11 @@
     <!--プロダクト一覧-->
     <div>
       <p>プロダクト一覧</p>
-      <div>
-        <Product v-for = "product in products"
-          :key = "product.key"
-        />
+      <div
+        v-for="n in 5"
+        :key="n"
+      >
+        <img src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"/>
       </div>
 
       <v-btn class="justify-end" to="/products">more</v-btn>
@@ -91,7 +92,7 @@
        ></v-data-table>
     </div>
 
-    <!--活動予定 カレンダーのところがわかりません-->
+    <!--活動予定 -->
     <div>
       <p>活動予定</p>
       <p>
@@ -106,22 +107,6 @@
 </template>
 
 <script>
-import Product from './Product.vue'
-
-export default{
-  name: 'Products',
-  components: {
-    Product
-  },
-  data: () => ({
-    products: []
-  }),
-  created (){
-    for(var i=0;i<2;i++){
-      this.products.push({key:i});
-    }
-  }
-}
 
 </script>
 

@@ -14,7 +14,7 @@
         </v-card-text>
       </v-card>
       <v-card>
-        <img src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"/>
+        <img src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01CXSRJHI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"/>
         <v-card-title>ゲーム開発</v-card-title>
         <v-card-text>
           PCやスマートフォンで遊べるゲームを開発することができます。
@@ -69,15 +69,34 @@
     <!--活動実績-->
     <div>
       <p>活動実績</p>
-      <p></p>
+
+    <!--実績ページをそのままとってくるなら-->
+      <v-card>
+        <v-card-subtitle class="text-left">RESULTDATE</v-card-subtitle>
+        <v-card-title>RESULTNAME</v-card-title>
+        <v-card-actions class="justify-end">
+          <v-btn>read more</v-btn>
+        </v-card-actions>
+    </v-card>
+
+    <!--テーブルにするなら-->
+      <div class="flex">
+       <p>YY-MM-DD</p>
+       <p>EVENTNAME</p>
+      </div>
+
+       <v-data-table
+        :items="results"
+        :items-per-page="2"
+       ></v-data-table>
     </div>
 
     <!--活動予定 カレンダーのところがわかりません-->
     <div>
       <p>活動予定</p>
       <p>
-        こちらの日程で活動しています
-        活動に興味のある方は是非一度見に来てください
+        こちらの日程で活動しています。
+        活動に興味のある方は是非一度見に来てください。
       </p>
       <v-btn to="/contact" color="primary">見学者申し込みフォームへ</v-btn>
     </div>
@@ -87,6 +106,7 @@
 
 <script>
 import Product from './Product.vue'
+
 
 export default{
   name: 'Products',

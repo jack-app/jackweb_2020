@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>作品一覧</p>
+    <p>プロダクト一覧</p>
     <div>
       <Product v-for = "product in products"
         :key = "product.key"

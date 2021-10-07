@@ -2,32 +2,28 @@
   <div>
     <p>プロダクト一覧</p>
     <div>
-      <Product v-for = "product in products"
-        :key = "product.key"
-      />
+      <Product v-for="product in products" :key="product.key" />
     </div>
   </div>
 </template>
 
 <script>
-import Product from './Product.vue'
+import Product from "./Product.vue";
 
-export default{
-  name: 'Products',
+export default {
+  name: "Products",
   components: {
-    Product
+    Product,
   },
   data: () => ({
-    products: []
+    products: [],
   }),
-  created (){
-    for(var i=0;i<5;i++){
-      this.products.push({key:i});
+  created() {
+    for (var i = 0; i < 5; i++) {
+      this.products.push({ key: i });
     }
-  }
-}
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

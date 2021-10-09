@@ -4,7 +4,7 @@
       <!--Vuetifyにあるメールのアイコン-->
       <v-icon large color="white">mdi-email</v-icon>
       <a href="">jack.app.tmy@gmail.com</a>
-      <img src=""/>
+      <img src="" />
       <a href="">@jackapp_tmy</a>
     </div>
 
@@ -12,9 +12,6 @@
   </footer>
 </template>
 
-<script>
+<script></script>
 
-</script>
-
-<style scoped>
-</style>
+<style scoped></style>

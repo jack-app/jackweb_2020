@@ -2,10 +2,14 @@
   <footer>
     <div>
       <!--Vuetifyにあるメールのアイコン-->
-      <v-icon large color="white">mdi-email</v-icon>
-      <a href="">jack.app.tmy@gmail.com</a>
-      <img src="" />
-      <a href="">@jackapp_tmy</a>
+
+      <a href="mailto:jack.app.tmy@gmail.com"
+        ><v-icon large>mdi-email</v-icon>jack.app.tmy@gmail.com</a
+      >
+
+      <a href="https://twitter.com/jackapp_tmy/"
+        ><img src="@/assets/twitter.png" />@jackapp_tmy</a
+      >
     </div>
 
     <p>＠jack 2021</p>

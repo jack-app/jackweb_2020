@@ -4,9 +4,7 @@
     <div>
       <p>活動内容</p>
       <div>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
+        <img src="@/assets/activity.png" />
         <p>通常活動</p>
         <p>
           毎週木曜日、隔週土曜日に集まって活動しています！
@@ -14,9 +12,7 @@
         </p>
       </div>
       <div>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
+        <img src="@/assets/event.png" />
         <p>イベント</p>
         <p>
           jackHackというハッカソンを例年ゴールデンウイークに行っています。
@@ -55,15 +51,47 @@
     </div>
 
     <!--イベント一覧-->
-    <div>
-      <p>イベント一覧</p>
-      <p>October 23, 2021 → October 30, 2021</p>
-      <p>JPHACKS</p>
-      <v-chip label>ハッカソン</v-chip>
+    <p>イベント一覧</p>
+    <div v-for="event in events" :key="event.key">
+      <p>{{ event.date }}</p>
+      <p>{{ event.name }}</p>
+      <v-chip label v-for="tag in event.tags" :key="tag">{{ tag }}</v-chip>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "Activity",
+  data: () => ({
+    events: [
+      {
+        key: 0,
+        name: "JPHACKS2021",
+        date: "October 23, 2021 → October 30, 2021",
+        tags: ["ハッカソン"]
+      },
+      {
+        key: 1,
+        name: "jackResult_2021秋",
+        date: "October 2, 2021",
+        tags: []
+      },
+      {
+        key: 2,
+        name: "sampleEvent",
+        date: "February 30, 2021",
+        tags: ["サンプルタグ"]
+      },
+      {
+        key: 3,
+        name: "sampleEvent2",
+        date: "January 30, 2021",
+        tags: ["サンプルタグ2", "サンプルタグ3"]
+      }
+    ]
+  })
+};
+</script>
 
 <style scoped></style>

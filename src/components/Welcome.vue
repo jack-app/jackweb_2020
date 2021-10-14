@@ -67,10 +67,8 @@
     <!--プロダクト一覧-->
     <div>
       <p>プロダクト一覧</p>
-      <div v-for="n in 5" :key="n">
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
+      <div v-for="product in products" :key="product.name">
+        <img v-if="product.icon" :src="product.icon" />
       </div>
 
       <v-btn class="justify-end" to="/products">more</v-btn>
@@ -80,19 +78,10 @@
     <div>
       <p>活動実績</p>
 
-      <!--実績ページをそのままとってくるなら-->
-      <v-card>
-        <v-card-subtitle class="text-left">RESULTDATE</v-card-subtitle>
-        <v-card-title>RESULTNAME</v-card-title>
-        <v-card-actions class="justify-end">
-          <v-btn>read more</v-btn>
-        </v-card-actions>
-      </v-card>
-
       <!--テーブルにするなら-->
-      <div class="flex">
-        <p>YY-MM-DD</p>
-        <p>EVENTNAME</p>
+      <div class="flex" v-for="result in results" :key="result.name">
+        <p>{{ result.date }}</p>
+        <p>{{ result.name }}</p>
       </div>
 
       <v-data-table :items="results" :items-per-page="2"></v-data-table>
@@ -116,6 +105,51 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "Welcome",
+  data: () => ({
+    products: [
+      {
+        icon:
+          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%8A%E5%AE%B6Bar.png?alt=media",
+        name: "お家Bar"
+      },
+      {
+        icon:
+          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%86%E3%81%94%E3%81%8F%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%91%E3%83%BC.png?alt=media",
+        name: "うごくスイーパー"
+      },
+      {
+        icon:
+          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%8A%E9%BA%A9%E3%83%A9%E3%82%A4%E3%83%B3.png?alt=media",
+        name: "お麩ライン"
+      },
+      {
+        icon: require("@/assets/ゲーム開発.png"),
+        name: "サンプルプロダクト"
+      },
+      {
+        icon: "",
+        name: "sampleProduct2"
+      }
+    ],
+    results: [
+      {
+        name: "JPHACKS2020 Best Audience Award他「コミックSE」",
+        date: "November 28, 2020"
+      },
+      {
+        name: "通知で覚える英単語 リリース",
+        date: "October 24, 2020"
+      },
+      {
+        name: "サンプル実績",
+        date: "September 28, 2020"
+      }
+    ]
+  })
+};
+</script>
 
 <style scoped></style>

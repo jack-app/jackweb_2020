@@ -12,27 +12,23 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Result",
   data: () => ({
-    results: [
-      {
-        name: "JPHACKS2020 Best Audience Award他「コミックSE」",
-        date: "November 28, 2020",
-        link: "https://jphacks.com/2020/result/innovator/"
-      },
-      {
-        name: "通知で覚える英単語 リリース",
-        date: "October 24, 2020",
-        link: "https://apps.apple.com/jp/app/通知で覚える英単語/id1537063008"
-      },
-      {
-        name: "サンプル実績",
-        date: "September 28, 2020",
-        link: "https://google.com"
-      }
-    ]
-  })
+    results: null
+  }),
+  mounted() {
+    axios
+      .get(`${process.env.VUE_APP_VERCEL_URL}/api/results`)
+      .then(response => {
+        this.results = response.data.message;
+      })
+      .catch(() => {
+        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+      });
+  }
 };
 </script>
 

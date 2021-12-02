@@ -66,9 +66,7 @@ app.get("/api/results", (req, res, next) => {
       let results = data.results.map((obj, i) => ({
         key: i,
         name: obj.properties.Name.title[0].plain_text,
-        link: obj.properties.Link.rich_text.length
-          ? obj.properties.Link.rich_text[0].plain_text
-          : null,
+        link: obj.properties.Link.url,
         date: obj.properties.Date.date ? obj.properties.Date.date.start : null
       }));
       res.json({
@@ -127,15 +125,9 @@ app.get("/api/products", (req, res, next) => {
           : null,
         icon: obj.cover ? obj.cover.file.url : null,
         name: obj.properties.Name.title[0].plain_text,
-        android: obj.properties["androidリンク"].rich_text.length
-          ? obj.properties["androidリンク"].rich_text[0].plain_text
-          : null,
-        ios: obj.properties["iosリンク"].rich_text.length
-          ? obj.properties["iosリンク"].rich_text[0].plain_text
-          : null,
-        web: obj.properties["webリンク"].rich_text.length
-          ? obj.properties["webリンク"].rich_text[0].plain_text
-          : null
+        android: obj.properties["androidリンク"].url,
+        ios: obj.properties["iosリンク"].url,
+        web: obj.properties["webリンク"].url
       }));
       res.json({
         message: results

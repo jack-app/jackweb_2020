@@ -1,17 +1,26 @@
 <template>
   <div>
-    <p>プロダクト一覧</p>
+    <div class="text-h4 products__title">プロダクト一覧</div>
     <div>
-      <Product
-        v-for="product in products"
-        :key="product.name"
-        :name="product.name"
-        :icon="product.icon"
-        :ios="product.ios"
-        :web="product.web"
-        :android="product.android"
-        :description="product.description"
-      />
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            md="6"
+            v-for="product in products"
+            :key="product.key"
+          >
+            <Product
+              :name="product.name"
+              :icon="product.icon"
+              :ios="product.ios"
+              :web="product.web"
+              :android="product.android"
+              :description="product.description"
+            />
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
   </div>
 </template>
@@ -79,4 +88,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.products__title {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 5px solid #fc913a;
+}
+</style>

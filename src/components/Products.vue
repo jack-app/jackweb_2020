@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-h4 products__title">プロダクト一覧</div>
+    <div class="text-h4 page__title">プロダクト一覧</div>
     <div>
       <v-container>
         <v-row>
@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style scoped>
-.products__title {
+.page__title {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;

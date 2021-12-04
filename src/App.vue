@@ -30,8 +30,6 @@ export default {
   text-align: center;
   color: #4c4c4c;
   background-color: #fff;
-  background-image: url("/triangle-mosaic.png");
-  background-repeat: repeat;
 }
 
 .page {

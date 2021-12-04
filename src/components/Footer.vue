@@ -1,7 +1,7 @@
 <template>
   <footer>
     <v-container>
-      <v-row>
+      <v-row align="center">
         <v-col cols="4">
           <v-btn
             class="contact__icon"
@@ -18,9 +18,7 @@
             <v-icon large>mdi-twitter</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="4">
-          <p class="copylight">©jack 2021</p>
-        </v-col>
+        <v-col cols="4">©jack 2021 </v-col>
         <v-spacer></v-spacer>
       </v-row>
     </v-container>
@@ -36,11 +34,5 @@ footer {
 
 .contact__icon {
   margin: auto 2px;
-}
-
-.copylight {
-  display: inline-block;
-  vertical-align: middle;
-  padding-top: 3px;
 }
 </style>

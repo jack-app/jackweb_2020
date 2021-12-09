@@ -46,8 +46,7 @@
     </v-container>
 
     <!--年間スケジュール タイムラインvuetifyで表示できた。やったね！-->
-    <!--v-timelineタグ内denseですべてのコンテンツを右に配置できる。でもそうすると日時の表示ができんのや。。。-->
-    <v-container class="ScheduleContainer">
+    <v-container class="schedule">
       <v-row>
         <v-col cols="12">年間スケジュール</v-col>
       </v-row>
@@ -73,13 +72,15 @@
     </v-container>
 
     <!--イベント一覧-->
-    <v-container class="EventListConttainer">
+    <v-container class="event-list">
       <p>イベント一覧</p>
-      <div v-for="event in events" :key="event.key">
-        <p>{{ event.date }}</p>
-        <p>{{ event.name }}</p>
-        <v-chip label v-for="tag in event.tags" :key="tag">{{ tag }}</v-chip>
-      </div>
+      <v-data-table :headers="headers" :items="events" :items-per-page="5">
+        <template v-slot:[`item.tags`]="{ item }">
+          <v-chip label v-for="(tag, index) in item.tags" :key="index">{{
+            tag
+          }}</v-chip>
+        </template>
+      </v-data-table>
     </v-container>
   </v-container>
 </template>
@@ -88,6 +89,11 @@
 export default {
   name: 'Activity',
   data: () => ({
+    headers: [
+      { text: '日付', value: 'date' },
+      { text: 'イベント名', value: 'name' },
+      { text: 'タグ', value: 'tags' },
+    ],
     events: [
       {
         key: 0,

@@ -4,52 +4,54 @@
 
     <!--jackでできること-->
     <div>
-      <p>jackでできること</p>
-      <v-card>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
-        <v-card-title>アプリ開発</v-card-title>
-        <v-card-text>
-          スマートフォンで動くアプリを開発することができます。
-          作ったアプリをAppStoreやGooglePlayで世界中にリリースすることができます！
-        </v-card-text>
-      </v-card>
-      <v-card>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01CXSRJHI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
-        <v-card-title>ゲーム開発</v-card-title>
-        <v-card-text>
-          PCやスマートフォンで遊べるゲームを開発することができます。
-          初心者から始めてゲームを作り上げた人もたくさんいます！
-        </v-card-text>
-      </v-card>
-      <v-card>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
-        <v-card-title>Webサービス開発</v-card-title>
-        <v-card-text>
-          「もっと便利な生活がししたい！もっと楽をしたい！」
-          生活をよりよくするサービスを開発することができます。
-        </v-card-text>
-      </v-card>
-      <v-card>
-        <img
-          src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
-        />
-        <v-card-title>デザイン</v-card-title>
-        <v-card-text>
-          アプリ・ゲーム・Webサービスの開発には魅力的なデザインが必要です。
-          jackはチーム開発が多いのでデザイナーはとても重宝されます。
-        </v-card-text>
-      </v-card>
+      <div class="midasi">jackでできること</div>
+        <div class=card-wrapper>
+          <v-card class="card-component" elevation="3" outlined>
+            <img
+              src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
+            />
+            <v-card-title>アプリ開発</v-card-title>
+            <v-card-text>
+              スマートフォンで動くアプリを開発することができます。
+              作ったアプリをAppStoreやGooglePlayで世界中にリリースすることができます！
+            </v-card-text>
+          </v-card>
+          <v-card class="card-component" elevation="3" outlined>
+            <img
+              src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01CXSRJHI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
+            />
+            <v-card-title>ゲーム開発</v-card-title>
+            <v-card-text>
+              PCやスマートフォンで遊べるゲームを開発することができます。
+              初心者から始めてゲームを作り上げた人もたくさんいます！
+            </v-card-text>
+          </v-card>
+          <v-card class="card-component" elevation="3" outlined>
+            <img
+              src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
+            />
+            <v-card-title>Webサービス開発</v-card-title>
+            <v-card-text>
+              「もっと便利な生活がししたい！もっと楽をしたい！」
+              生活をよりよくするサービスを開発することができます。
+            </v-card-text>
+          </v-card>
+          <v-card class="card-component" elevation="3" outlined>
+            <img
+              src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
+            />
+            <v-card-title>デザイン</v-card-title>
+            <v-card-text>
+              アプリ・ゲーム・Webサービスの開発には魅力的なデザインが必要です。
+              jackはチーム開発が多いのでデザイナーはとても重宝されます。
+            </v-card-text>
+          </v-card>
+        </div>
     </div>
 
     <!--活動内容-->
     <div>
-      <p>活動内容</p>
+      <div class="midasi">活動内容</div>
       <img
         src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"
       />
@@ -66,7 +68,7 @@
 
     <!--プロダクト一覧-->
     <div>
-      <p>プロダクト一覧</p>
+      <div class="midasi">プロダクト一覧</div>
       <div v-for="product in products" :key="product.name">
         <img v-if="product.icon" :src="product.icon" />
       </div>
@@ -76,7 +78,7 @@
 
     <!--活動実績-->
     <div>
-      <p>活動実績</p>
+      <div class="midasi">活動実績</div>
 
       <!--テーブルにするなら-->
       <div class="flex" v-for="result in results" :key="result.name">
@@ -89,7 +91,7 @@
 
     <!--活動予定 -->
     <div>
-      <p>活動予定</p>
+      <div class="midasi">活動予定</div>
       <p>
         こちらの日程で活動しています。
         活動に興味のある方は是非一度見に来てください。
@@ -159,4 +161,37 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-component {
+  width: 24vw;
+}
+
+/* .card-2 {
+  margin-top: 10vh;
+} */
+.midasi:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /*下線の上下位置調整*/
+  display: inline-block;
+  width: 50px; /*下線の幅*/
+  height: 0.2em; /*下線の太さ*/
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); /*位置調整*/
+  background-color: #FC913A; /*下線の色*/
+}
+
+.midasi {
+  font-size: 1.6em;
+  display: inline-block;
+  position: relative;
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+</style>

@@ -1,18 +1,28 @@
 <template>
   <div>
-    <!--テーブルにするなら-->
-    <div class="flex" v-for="result in results" :key="result.name">
-      <p>{{ result.date }}</p>
-      <p>{{ result.name }}</p>
-    </div>
-
-    <v-data-table :items="results" :items-per-page="2"></v-data-table>
+    <v-data-table
+      :headers="headers"
+      :items="results"
+      hide-default-header
+      hide-default-footer
+    >
+    </v-data-table>
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
+    headers: [
+      {
+        text: "日付",
+        value: "date"
+      },
+      {
+        text: "書く",
+        value: "name"
+      }
+    ],
     results: [
       {
         name: "JPHACKS2020 Best Audience Award他「コミックSE」",

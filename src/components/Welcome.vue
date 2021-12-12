@@ -9,7 +9,7 @@
     </div>
 
     <!--活動内容-->
-    <div>
+    <div class="activity">
       <div class="midasi">活動内容</div>
       <Activity />
     </div>
@@ -31,8 +31,10 @@
       <div class="midasi">活動予定</div>
       <Schedule />
     </div>
-    <p>FAQ</p>
-    <Questions />
+    <div>
+      <div class="midasi">よくある質問</div>
+      <Questions />
+    </div>
   </div>
 </template>
 
@@ -74,8 +76,14 @@ export default {
 }
 
 .midasi {
+  margin-top: 6vh;
+  margin-bottom: 4vh;
   font-size: 1.6em;
   display: inline-block;
   position: relative;
+}
+
+.activity {
+  margin: 0 auto;
 }
 </style>

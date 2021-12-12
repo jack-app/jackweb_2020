@@ -1,10 +1,14 @@
 <template>
   <div>
-    <div v-for="product in products" :key="product.name">
-      <img v-if="product.icon" :src="product.icon" />
+    <v-row>
+      <v-col cols="12" md="3" v-for="product in products" :key="product.name">
+        <img width="160vw" height="160wh" v-if="product.icon" :src="product.icon" />
+      </v-col>
+    </v-row>
+    <div class="toproducts-btn">
+      <a href="./Products.vue">詳しく見る</a>
     </div>
-
-    <v-btn class="justify-end" to="/products">more</v-btn>
+    <!-- <v-btn class="justify-end" to="/products">more</v-btn> -->
   </div>
 </template>
 
@@ -40,4 +44,38 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.toproducts-btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh auto auto auto;
+  padding: 1em 2em;
+  width: 300px;
+  color: #FC913A;
+  font-size: 18px;
+  font-weight: 700;
+  border: 3px solid #FCA965;
+  border-radius: 10px;
+}
+
+.toproducts-btn a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #FC913A;
+  border-right: 3px solid #FC913A;
+  transform: rotate(45deg);
+}
+
+.toproducts-btn a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #FCA965;
+}
+
+.toproducts-btn a:hover::after {
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+}
+</style>

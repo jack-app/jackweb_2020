@@ -1,12 +1,12 @@
 <template>
   <div>
     <!--テーブルにするなら-->
-    <div class="flex" v-for="result in results" :key="result.name">
+    <!-- <div class="flex" v-for="result in results" :key="result.name">
       <p>{{ result.date }}</p>
       <p>{{ result.name }}</p>
-    </div>
+    </div> -->
 
-    <v-data-table :items="results" :items-per-page="2"></v-data-table>
+    <v-data-table :items="results" :items-per-page="5" class="elevation-1"></v-data-table>
   </div>
 </template>
 

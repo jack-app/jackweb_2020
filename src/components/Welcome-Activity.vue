@@ -45,6 +45,7 @@
   font-weight: 700;
   border: 3px solid #FCA965;
   border-radius: 10px;
+  text-decoration:none;
 }
 
 .toactivity-btn a::after {
@@ -70,6 +71,44 @@
 /* ボタン下ぞろえ用未完成 */
 .d-flex {
   margin: auto 16px 6px 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .toactivity-btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4vh auto auto auto;
+  padding: 0.9em 1.8em;
+  width: 260px;
+  color: #FC913A;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #FCA965;
+  border-radius: 10px;
+  text-decoration:none;
+}
+
+.toactivity-btn a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #FC913A;
+  border-right: 3px solid #FC913A;
+  transform: rotate(45deg);
+}
+
+.toactivity-btn a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #FCA965;
+}
+
+.toactivity-btn a:hover::after {
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+}
+
 }
 
 </style>

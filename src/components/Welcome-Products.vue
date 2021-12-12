@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="12" md="3" v-for="product in products" :key="product.name">
+      <v-col cols="12" xl="6" sm="6" md="3" lg="3" v-for="product in products" :key="product.name">
         <img width="160vw" height="160wh" v-if="product.icon" :src="product.icon" />
       </v-col>
     </v-row>
@@ -57,6 +57,7 @@ export default {
   font-weight: 700;
   border: 3px solid #FCA965;
   border-radius: 10px;
+  text-decoration:none;
 }
 
 .toproducts-btn a::after {
@@ -77,5 +78,43 @@ export default {
 .toproducts-btn a:hover::after {
   border-top: 3px solid #333333;
   border-right: 3px solid #333333;
+}
+
+@media screen and (max-width: 500px) {
+  .toproducts-btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4vh auto auto auto;
+  padding: 0.9em 1.8em;
+  width: 260px;
+  color: #FC913A;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #FCA965;
+  border-radius: 10px;
+  text-decoration:none;
+}
+
+.toproducts-btn a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #FC913A;
+  border-right: 3px solid #FC913A;
+  transform: rotate(45deg);
+}
+
+.toproducts-btn a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #FCA965;
+}
+
+.toproducts-btn a:hover::after {
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+}
+
 }
 </style>

@@ -77,7 +77,7 @@ export default {
 
 .midasi {
   margin-top: 6vh;
-  margin-bottom: 4vh;
+  margin-bottom: 6vh;
   font-size: 1.6em;
   display: inline-block;
   position: relative;

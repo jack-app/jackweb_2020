@@ -1,46 +1,53 @@
 <template>
   <div>
-    <v-row>
-      <v-col cols="12" xl="6" sm="6" md="3" lg="3" v-for="product in products" :key="product.name">
-        <img width="160vw" height="160wh" v-if="product.icon" :src="product.icon" />
-      </v-col>
-    </v-row>
+    <v-container>
+      <v-row justify="center">
+        <v-col
+          cols="12"
+          sm="6"
+          md="3"
+          v-for="product in products"
+          :key="product.name"
+        >
+          <img
+            width="160vw"
+            height="160wh"
+            v-if="product.icon"
+            :src="product.icon"
+          />
+        </v-col>
+      </v-row>
+    </v-container>
     <div class="toproducts-btn">
-      <a href="./Products.vue">詳しく見る</a>
+      <router-link to="/products">詳しく見る</router-link>
     </div>
     <!-- <v-btn class="justify-end" to="/products">more</v-btn> -->
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data: () => ({
-    products: [
-      {
-        icon:
-          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%8A%E5%AE%B6Bar.png?alt=media",
-        name: "お家Bar"
-      },
-      {
-        icon:
-          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%86%E3%81%94%E3%81%8F%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%91%E3%83%BC.png?alt=media",
-        name: "うごくスイーパー"
-      },
-      {
-        icon:
-          "https://firebasestorage.googleapis.com/v0/b/jack-web2020.appspot.com/o/productimage%2F%E3%81%8A%E9%BA%A9%E3%83%A9%E3%82%A4%E3%83%B3.png?alt=media",
-        name: "お麩ライン"
-      },
-      {
-        icon: require("@/assets/ゲーム開発.png"),
-        name: "サンプルプロダクト"
-      },
-      {
-        icon: "",
-        name: "sampleProduct2"
-      }
-    ]
-  })
+    products: []
+  }),
+  mounted() {
+    axios
+      .get(`${process.env.VUE_APP_VERCEL_URL}/api/products`)
+      .then(response => {
+        let array = response.data.message.slice();
+        array = array.filter(item => item.icon);
+        for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        this.products = array.slice(0, 5);
+      })
+      .catch(() => {
+        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+      });
+  }
 };
 </script>
 
@@ -52,27 +59,27 @@ export default {
   margin: 2vh auto auto auto;
   padding: 1em 2em;
   width: 300px;
-  color: #FC913A;
+  color: #fc913a;
   font-size: 18px;
   font-weight: 700;
-  border: 3px solid #FCA965;
+  border: 3px solid #fca965;
   border-radius: 10px;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .toproducts-btn a::after {
-  content: '';
+  content: "";
   width: 5px;
   height: 5px;
-  border-top: 3px solid #FC913A;
-  border-right: 3px solid #FC913A;
+  border-top: 3px solid #fc913a;
+  border-right: 3px solid #fc913a;
   transform: rotate(45deg);
 }
 
 .toproducts-btn a:hover {
   color: #333333;
   text-decoration: none;
-  background-color: #FCA965;
+  background-color: #fca965;
 }
 
 .toproducts-btn a:hover::after {
@@ -82,39 +89,38 @@ export default {
 
 @media screen and (max-width: 500px) {
   .toproducts-btn a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 4vh auto auto auto;
-  padding: 0.9em 1.8em;
-  width: 260px;
-  color: #FC913A;
-  font-size: 12px;
-  font-weight: 600;
-  border: 2px solid #FCA965;
-  border-radius: 10px;
-  text-decoration:none;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4vh auto auto auto;
+    padding: 0.9em 1.8em;
+    width: 260px;
+    color: #fc913a;
+    font-size: 12px;
+    font-weight: 600;
+    border: 2px solid #fca965;
+    border-radius: 10px;
+    text-decoration: none;
+  }
 
-.toproducts-btn a::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-top: 3px solid #FC913A;
-  border-right: 3px solid #FC913A;
-  transform: rotate(45deg);
-}
+  .toproducts-btn a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #fc913a;
+    border-right: 3px solid #fc913a;
+    transform: rotate(45deg);
+  }
 
-.toproducts-btn a:hover {
-  color: #333333;
-  text-decoration: none;
-  background-color: #FCA965;
-}
+  .toproducts-btn a:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #fca965;
+  }
 
-.toproducts-btn a:hover::after {
-  border-top: 3px solid #333333;
-  border-right: 3px solid #333333;
-}
-
+  .toproducts-btn a:hover::after {
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+  }
 }
 </style>

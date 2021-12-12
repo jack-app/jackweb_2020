@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data: () => ({
     headers: [
@@ -19,25 +21,22 @@ export default {
         value: "date"
       },
       {
-        text: "書く",
+        text: "実績",
         value: "name"
       }
     ],
-    results: [
-      {
-        name: "JPHACKS2020 Best Audience Award他「コミックSE」",
-        date: "November 28, 2020"
-      },
-      {
-        name: "通知で覚える英単語 リリース",
-        date: "October 24, 2020"
-      },
-      {
-        name: "サンプル実績",
-        date: "September 28, 2020"
-      }
-    ]
-  })
+    results: []
+  }),
+  mounted() {
+    axios
+      .get(`${process.env.VUE_APP_VERCEL_URL}/api/results`)
+      .then(response => {
+        this.results = response.data.message.slice(0, 5);
+      })
+      .catch(() => {
+        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+      });
+  }
 };
 </script>
 

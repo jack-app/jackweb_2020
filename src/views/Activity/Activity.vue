@@ -74,20 +74,19 @@
     <!--イベント一覧-->
     <v-container class="event-list">
       <p>イベント一覧</p>
-      <v-data-table :headers="headers" :items="events" :items-per-page="5">
-        <template v-slot:[`item.tags`]="{ item }">
-          <v-chip label v-for="(tag, index) in item.tags" :key="index">{{
-            tag
-          }}</v-chip>
-        </template>
-      </v-data-table>
+      <EventList />
     </v-container>
   </v-container>
 </template>
 
 <script>
+import axios from "axios";
+import EventList from '../../components/EventList/EventList.vue';
+
 export default {
-  name: 'Activity',
+  components: {
+    EventList
+  },
   data: () => ({
     headers: [
       { text: '日付', value: 'date' },
@@ -121,8 +120,19 @@ export default {
       },
     ],
   }),
+  mounted() {
+    axios
+      .get(`${process.env.VUE_APP_VERCEL_URL}/api/events`)
+      .then(response => {
+        this.events = response.data.message;
+      })
+      .catch(() => {
+        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+      });
+  }
 };
 </script>
+
 
 <style scoped>
 .cards {
@@ -141,137 +151,4 @@ export default {
   margin: none;
   place-items: center;
 }
-
-/* .container .title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0.5rem;
-  font-size: 36px;
-  text-align: center;
-  text-decoration-line: underline;
-} */
-
-/* .container .usualImg {
-  position: absolute;
-  top: 50px;
-  left: 10%;
-  width: 55%;
-  height: 300px;
-  max-width: none;
-  object-fit: cover;
-  z-index: 5;
-} */
-
-/* .container .usualText {
-  position: absolute;
-  top: 80px;
-  right: 100px;
-  height: 20rem;
-  width: 20rem;
-  max-width: none;
-  padding: 1.5rem;
-  margin: 0.5rem;
-  border-radius: 50%;
-  background-color: #f6b352;
-  color: #fff;
-  font-size: 1.1rem;
-  line-height: 2;
-  place-items: center;
-  z-index: 10;
-} */
-
-/* .container .eventsImg {
-  position: absolute;
-  top: 350px;
-  right: 10%;
-  width: 55%;
-  height: 300px;
-  object-fit: cover;
-  z-index: 1;
-} */
-
-/* .container .eventsText {
-  display: grid;
-  position: absolute;
-  top: 300px;
-  left: 15%;
-  height: 30rem;
-  width: 30rem;
-  padding: 2.25rem;
-  margin: 0.5rem;
-  border-radius: 50%;
-  background-color: #fc913a;
-  color: #fff;
-  font-size: 1.1rem;
-  line-height: 1.75;
-  place-items: center;
-  z-index: 10;
-} */
-
-/* v-cardで丸のところ作る！ */
-
-/* .usual {
-  position: relative;
-  /* margin: 1rem;
- 
-
-.usualImg {
-  display: grid;
-  position: absolute;
-  top: 0;
-  left: 50px;
-  height: 25rem;
-}
-.usualText {
-  display: grid;
-  position: absolute;
-  top: 70px;
-  left: 350px;
-  height: 25rem;
-  width: 25rem;
-  padding: 1.5rem;
-  margin: 0.5rem;
-  border-radius: 50%;
-  background-color: #fc913a;
-  color: #fff;
-  font-size: 1.1rem;
-  line-height: 2;
-  place-items: center;
-}
-
-.events {
-  position: relative;
-}
-
-/* .eventsImg {
-  display: grid;
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  height: 25rem;
-} */
-
-/* style書く順番
-display
-position
-float
-width
-height
-margin
-padding
-border
-background-color
-color
-font
-text-decoration
-text-align
-vertical-align
-まず要素を表示するか？
-要素をどこに配置するか？
-要素のボックスモデルはどういうものになるか？
-背景は？
-テキストなど前景にあるものは？
-*/
 </style>

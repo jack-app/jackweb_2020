@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Header />
-    <v-main>
+    <v-main class="page">
       <router-view />
     </v-main>
     <Footer />
@@ -9,16 +9,16 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import Header from "./components/Header/Header.vue";
+import Footer from "./components/Footer/Footer.vue";
 
 export default {
   name: "App",
 
   components: {
     Header,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>
 
@@ -30,7 +30,16 @@ export default {
   text-align: center;
   color: #4c4c4c;
   background-color: #fff;
-  background-image: url("/triangle-mosaic.png");
-  background-repeat: repeat;
+}
+
+.page {
+  width: 80%;
+  margin: 10px auto;
+}
+
+@media screen and (max-width: 960px) {
+  .page {
+    width: 90%;
+  }
 }
 </style>

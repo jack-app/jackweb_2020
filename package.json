@@ -10,8 +10,13 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.6",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
-    "firebase": "^8.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "is-svg": "^4.3.1",
+    "ssri": "^8.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-scrollto": "^2.20.0",
@@ -46,9 +51,7 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
+    "parserOptions": {},
     "rules": {}
   },
   "browserslist": [

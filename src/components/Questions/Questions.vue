@@ -32,7 +32,6 @@
 
 <script>
 export default {
-  name: "Questions",
   data: () => ({
     contents: [
       {

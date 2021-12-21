@@ -11,7 +11,6 @@
           depressed
           raised="false"
           plain
-          to="/products"
           :ripple="false"
           class="text-decoration-underline"
         >
@@ -21,7 +20,6 @@
           text
           depressed
           plain
-          to="/activity"
           color="black"
           class="text-decoration-underline"
         >
@@ -32,7 +30,6 @@
           depressed
           plain
           color="black"
-          to="/results"
           class="text-decoration-underline"
         >
           実績
@@ -42,7 +39,6 @@
           depressed
           plain
           color="black"
-          to="/contact"
           class="text-decoration-underline"
         >
           お問い合わせ
@@ -51,13 +47,6 @@
       <v-btn
         depressed
         plain
-        to="/"
-        v-if="
-          this.$route.path.match('/products') ||
-            this.$route.path.match('/activity') ||
-            this.$route.path.match('/results') ||
-            this.$route.path.match('/contact')
-        "
       >
         入部希望者はこちら
       </v-btn>

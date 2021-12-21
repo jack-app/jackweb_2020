@@ -2,9 +2,7 @@
   <v-container class="activities">
     <!--活動内容-->
     <v-container cols="12" class="activities-container">
-      <v-row>
-        <v-col cols="12" md="12" class="title">活動内容</v-col>
-      </v-row>
+      <ContentTitle title="活動内容" />
       <v-row>
         <v-col cols="12" class="usual">
           <v-card class="cards" max-height="400px">
@@ -45,35 +43,10 @@
       </v-row>
     </v-container>
 
-    <!--年間スケジュール タイムラインvuetifyで表示できた。やったね！-->
-    <v-container class="schedule">
-      <v-row>
-        <v-col cols="12">年間スケジュール</v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12">
-          <v-timeline :reverse="reverse">
-            <v-timeline-item v-for="n in 2" :key="n">
-              <span slot="opposite">
-                <v-text>〇月</v-text>
-              </span>
-              <v-card class="elevation-2 text-left">
-                <v-card-title class="text-h5">
-                  EVENTNAME
-                </v-card-title>
-                <v-card-text>
-                  ここに活動内容が入ります。1～2行くらい。
-                </v-card-text>
-              </v-card>
-            </v-timeline-item>
-          </v-timeline>
-        </v-col>
-      </v-row>
-    </v-container>
-
+    <!-- 年間スケジュール -->
     <!--イベント一覧-->
     <v-container class="event-list">
-      <p>イベント一覧</p>
+      <ContentTitle title="イベント一覧" />
       <EventList />
     </v-container>
   </v-container>
@@ -81,11 +54,13 @@
 
 <script>
 import axios from "axios";
-import EventList from '../../components/EventList/EventList.vue';
+import ContentTitle from '@/components/content-title/ContentTitle.vue';
+import EventList from '../../components/event-list/EventList.vue';
 
 export default {
   components: {
-    EventList
+    ContentTitle,
+    EventList,
   },
   data: () => ({
     headers: [

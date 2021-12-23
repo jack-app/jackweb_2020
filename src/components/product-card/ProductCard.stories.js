@@ -2,7 +2,7 @@ import Vuetify from "vuetify";
 import ProductCard from "./ProductCard.vue";
 
 export default {
-  title: "Components/ProductCard",
+  title: "Modules/ProductCard",
   component: ProductCard,
 };
 

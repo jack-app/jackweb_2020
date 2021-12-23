@@ -2,8 +2,8 @@ module.exports = {
   pages: {
     index: {
       entry: "src/main.js",
-      title: "アプリ開発団体jack"
-    }
+      title: "アプリ開発団体jack",
+    },
   },
   transpileDependencies: ["vuetify"],
   devServer: {
@@ -11,8 +11,7 @@ module.exports = {
     proxy: {
       "^/api": {
         target: "http://localhost:3000",
-        secure: false
-      }
-    }
-  }
+      },
+    },
+  },
 };

@@ -1,16 +1,16 @@
 import Vuetify from '@/plugins/vuetify';
-import Activity from './Activity.vue';
+import Products from './Products.vue';
 
 export default {
-  title: 'Pages/Activity',
-  component: Activity,
+  title: 'Pages/Products',
+  component: Products,
 };
 
 const Template = (args, {argTypes}) => ({
-  components: { Activity },
+  components: { Products },
   props: Object.keys(argTypes),
   Vuetify,
-  template: '<Activity />',
+  template: '<Products />',
 });
 
 export const Default = Template.bind({});

@@ -1,16 +1,16 @@
 import Vuetify from '@/plugins/vuetify';
-import Activity from './Activity.vue';
+import Achievements from './Achievements.vue';
 
 export default {
-  title: 'Pages/Activity',
-  component: Activity,
+  title: 'Pages/Achievements',
+  component: Achievements,
 };
 
 const Template = (args, {argTypes}) => ({
-  components: { Activity },
+  components: { Achievements },
   props: Object.keys(argTypes),
   Vuetify,
-  template: '<Activity />',
+  template: '<Achievements />',
 });
 
 export const Default = Template.bind({});

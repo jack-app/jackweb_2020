@@ -1,33 +1,32 @@
 <template>
   <v-container>
-    <ResultCard
-      v-for="result in results"
-      :key="result.name"
-      :name="result.name"
-      :date="result.date"
-      :link="result.link"
-      class="result__card"
+    <AchievementCard
+      v-for="achievement in achievements"
+      :key="achievement.name"
+      :name="achievement.name"
+      :date="achievement.date"
+      :link="achievement.link"
+      class="achievement__card"
     />
   </v-container>
 </template>
 
 <script>
-import ResultCard from "../result-card/ResultCard.vue";
+import AchievementCard from "../achievement-card/AchievementCard.vue";
 import axios from "axios";
 
 export default {
   components: {
-    ResultCard,
+    AchievementCard,
   },
   data: () => ({
-    results: [],
+    achievements: [],
   }),
   mounted() {
-    console.log(document.domain);
     axios
       .get(`${process.env.VUE_APP_VERCEL_URL}/api/results`)
       .then((response) => {
-        this.results = response.data.message;
+        this.achievements = response.data.message;
       })
       .catch(() => {
         //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
@@ -37,7 +36,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.result__card{
+.achievement__card{
   margin: 20px
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-card style="border: solid #f6b352">
-    <div class="result__date">
+    <div class="achievement__date">
       <v-card-subtitle class="text-left">
         {{ date }}
       </v-card-subtitle>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.result__date {
+.achievement__date {
   color: #f6b352;
 }
 </style>

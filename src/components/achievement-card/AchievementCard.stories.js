@@ -1,14 +1,14 @@
 import Vuetify from "vuetify";
-import ResultCard from "./ResultCard.vue";
+import AchievementCard from "./AchievementCard.vue";
 
 export default {
-  title: "Components/ResultCard",
-  component: ResultCard,
+  title: "Modules/AchievementCard",
+  component: AchievementCard,
 };
 
 const Template = (args, { argTypes }) => ({
-  components: { ResultCard },
-  template: '<ResultCard :name="name" :date="date" :link="link" />',
+  components: { AchievementCard },
+  template: '<AchievementCard :name="name" :date="date" :link="link" />',
   Vuetify,
   props: Object.keys(argTypes),
 });

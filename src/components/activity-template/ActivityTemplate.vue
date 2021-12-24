@@ -1,19 +1,18 @@
 <template>
   <v-container cols="12" class="activities-container">
-    <ContentTitle title="活動内容" />
     <v-row>
       <v-col cols="12" class="usual">
         <v-card class="cards" max-height="400px">
           <v-row>
-            <v-col cols="7">
-              <v-img src="@/assets/activity.png" />
+            <v-col cols="12" md="7">
+              <v-img :src="require('@/assets/activity.png')" />
             </v-col>
-            <v-col cols="3">
+            <v-col cols="12" md="5">
               <v-card-title>通常活動</v-card-title>
               <v-card-text>
                 毎週木曜日、隔週土曜日に集まって活動しています！
-                現在はzoomで活動していますが、コロナが開けたら名古屋大学の図書館での活動を再開します。</v-card-text
-              >
+                現在はzoomやgatherで活動していますが、コロナが開けたら名古屋大学の図書館での活動を再開します。
+              </v-card-text>
             </v-col>
           </v-row>
         </v-card>
@@ -23,7 +22,7 @@
       <v-col cols="12" class="usual">
         <v-card class="cards">
           <v-row>
-            <v-col cols="4">
+            <v-col cols="12" md="5" order="2" order-md="1">
               <v-card-title>イベント</v-card-title>
               <v-card-text>
                 jackHackというハッカソンを例年ゴールデンウイークに行っています。<br />
@@ -32,8 +31,8 @@
                 例年12月に行われるjackFesでは、1年の活動の成果を発表しあいます。<br
               /></v-card-text>
             </v-col>
-            <v-col cols="8">
-              <v-img src="@/assets/activity.png" />
+            <v-col cols="12" md="7" order="1" order-md="2">
+              <v-img :src="require('@/assets/event.png')" />
             </v-col>
           </v-row>
         </v-card>
@@ -41,13 +40,3 @@
     </v-row>
   </v-container>
 </template>
-
-<script>
-import ContentTitle from "@/components/content-title/ContentTitle.vue"
-
-export default {
-  components: {
-    ContentTitle,
-  }
-}
-</script>

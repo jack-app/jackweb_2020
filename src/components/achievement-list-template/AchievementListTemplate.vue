@@ -35,8 +35,8 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-.achievement__card{
-  margin: 20px
+<style scoped>
+.achievement__card {
+  margin: 20px;
 }
 </style>

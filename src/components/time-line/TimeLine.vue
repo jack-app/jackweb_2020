@@ -1,9 +1,16 @@
 <template>
-  <v-timeline reverse>
-    <v-timeline-item v-for="schedule in schedules" :key="schedule.id">
-      <span slot="opposite">
-        <v-text>{{ schedule.month }}月</v-text>
-      </span>
+  <v-timeline align-top dense>
+    <v-timeline-item
+      v-for="schedule in schedules"
+      :key="schedule.id"
+      class="py-4"
+      color="orange"
+      left="true"
+      fill-dot
+    >
+      <template v-slot:icon>
+        <span style="color: white">{{ schedule.month }}月</span>
+      </template>
       <v-card class="elevation-2 text-left">
         <v-card-title class="text-h5">
           {{ schedule.title }}

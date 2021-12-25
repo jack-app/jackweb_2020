@@ -1,15 +1,13 @@
 <template>
   <a :href="link">
-    <v-img :src="badge" contain />
+    <v-img :src="badgeSrc" contain />
   </a>
 </template>
 
 <script>
 export default {
   props: {
-    link: {
-      type: String,
-    },
+    link: String,
     platform: {
       type: String,
       validator: function (value) {
@@ -17,20 +15,18 @@ export default {
       },
     },
   },
+  data: () => ({
+    badges: [
+      { name: "web", badge_src: require('@/assets/web-link-badge.png') },
+      { name: "ios", badge_src: require('@/assets/app-store-badge.svg') },
+      { name: "android", badge_src: require('@/assets/google-play-badge.png') },
+    ]
+  }),
   computed: {
-    badge() {
-      switch (this.platform) {
-        case "web":
-          return require("@/assets/web-link-badge.png");
-          break;
-        case "ios":
-          return require("@/assets/app-store-badge.svg");
-          break;
-        case "android":
-          return require("@/assets/google-play-badge.png");
-          break;
-      }
-    },
+    badgeSrc() {
+      const badgeData = this.badges.find((badge) => badge.name == this.platform)
+      return badgeData.badge_src
+    }
   },
 };
 </script>

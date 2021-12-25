@@ -1,16 +1,16 @@
 import Vuetify from "@/plugins/vuetify";
-import Questions from "./Questions.vue";
+import ContactForm from "./ContactForm.vue";
 
 export default {
-  title: "Templates/Questions",
-  component: Questions,
+  title: "Templates/ContactForm",
+  component: ContactForm,
 };
 
 const Template = (args, { argTypes }) => ({
-  components: { Questions },
+  components: { ContactForm },
   props: Object.keys(argTypes),
   Vuetify,
-  template: "<Questions />",
+  template: "<ContactForm />",
 });
 
 export const Default = Template.bind({});

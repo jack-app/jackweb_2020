@@ -1,5 +1,5 @@
 <template>
-  <v-timeline :reverse="reverse">
+  <v-timeline reverse>
     <v-timeline-item v-for="schedule in schedules" :key="schedule.id">
       <span slot="opposite">
         <v-text>{{ schedule.month }}月</v-text>
@@ -18,8 +18,6 @@
 
 <script>
 export default {
-  props: [
-    'schedules'
-  ]
-}
+  props: ["schedules"],
+};
 </script>

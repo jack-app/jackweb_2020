@@ -1,13 +1,13 @@
 <template>
-  <h1 class="text-h4 page-title">{{ title }}</h1>
+  <div class="text-center">
+    <h1 class="text-h4 page-title">{{ title }}</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  props: [
-    'title'
-  ]
-}
+  props: ["title"],
+};
 </script>
 
 <style scoped>

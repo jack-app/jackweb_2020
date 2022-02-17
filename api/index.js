@@ -3,11 +3,11 @@ const { Client } = require("@notionhq/client");
 require("dotenv").config();
 
 const notion = new Client({
-  auth: process.env.NOTION_SECRET
+  auth: process.env.NOTION_SECRET,
 });
 
 //node api/index.jsでサーバー起動
-var server = app.listen(3000, function() {
+var server = app.listen(3000, function () {
   console.log("Node.js is listening to PORT:" + server.address().port);
 });
 
@@ -20,10 +20,10 @@ app.get("/api/events", (req, res, next) => {
       sorts: [
         {
           property: "Date",
-          direction: "descending"
-        }
+          direction: "descending",
+        },
       ], //日付降順でソート
-      page_size: 5 //5件取ってくる
+      page_size: 5, //5件取ってくる
     });
     if (data.object != "list") {
       throw new Error("notion api err");
@@ -31,16 +31,16 @@ app.get("/api/events", (req, res, next) => {
       let results = data.results.map((obj, i) => ({
         key: i,
         name: obj.properties.Name.title[0].plain_text,
-        tags: obj.properties.Tags.multi_select.map(tag => tag.name),
+        tags: obj.properties.Tags.multi_select.map((tag) => tag.name),
         date: obj.properties.Date.date
           ? obj.properties.Date.date.start +
             (obj.properties.Date.date.end
               ? "→" + obj.properties.Date.date.end
               : "")
-          : ""
+          : "",
       }));
       res.json({
-        message: results
+        message: results,
       });
     }
   })().catch(next);
@@ -55,10 +55,10 @@ app.get("/api/results", (req, res, next) => {
       sorts: [
         {
           property: "Date",
-          direction: "descending"
-        }
+          direction: "descending",
+        },
       ],
-      page_size: 10
+      page_size: 10,
     });
     if (data.object != "list") {
       throw new Error("notion api err");
@@ -67,10 +67,10 @@ app.get("/api/results", (req, res, next) => {
         key: i,
         name: obj.properties.Name.title[0].plain_text,
         link: obj.properties.Link.url,
-        date: obj.properties.Date.date ? obj.properties.Date.date.start : null
+        date: obj.properties.Date.date ? obj.properties.Date.date.start : null,
       }));
       res.json({
-        message: results
+        message: results,
       });
     }
   })().catch(next);
@@ -87,33 +87,33 @@ app.get("/api/products", (req, res, next) => {
           {
             property: "jackWeb掲載",
             checkbox: {
-              equals: true
-            }
+              equals: true,
+            },
           },
           {
             or: [
               {
                 property: "iosリンク",
                 text: {
-                  is_not_empty: true
-                }
+                  is_not_empty: true,
+                },
               },
               {
                 property: "androidリンク",
                 text: {
-                  is_not_empty: true
-                }
+                  is_not_empty: true,
+                },
               },
               {
                 property: "webリンク",
                 text: {
-                  is_not_empty: true
-                }
-              }
-            ]
-          }
-        ]
-      }
+                  is_not_empty: true,
+                },
+              },
+            ],
+          },
+        ],
+      },
     });
     if (data.object != "list") {
       throw new Error("notion api err");
@@ -123,14 +123,14 @@ app.get("/api/products", (req, res, next) => {
         description: obj.properties["プロダクト概要"].rich_text.length
           ? obj.properties["プロダクト概要"].rich_text[0].plain_text
           : null,
-        icon: obj.cover ? obj.cover.file.url : null,
+        icon: obj.cover ? obj.cover[obj.cover.type].url : null,
         name: obj.properties.Name.title[0].plain_text,
         android: obj.properties["androidリンク"].url,
         ios: obj.properties["iosリンク"].url,
-        web: obj.properties["webリンク"].url
+        web: obj.properties["webリンク"].url,
       }));
       res.json({
-        message: results
+        message: results,
       });
     }
   })().catch(next);

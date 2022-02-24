@@ -6,50 +6,12 @@
       </v-btn>
       <v-spacer></v-spacer>
       <div class="hidden-sm-and-down">
-        <v-btn
-          text
-          depressed
-          raised="false"
-          plain
-          :ripple="false"
-          class="text-decoration-underline"
-        >
-          プロダクト
-        </v-btn>
-        <v-btn
-          text
-          depressed
-          plain
-          color="black"
-          class="text-decoration-underline"
-        >
-          活動内容
-        </v-btn>
-        <v-btn
-          text
-          depressed
-          plain
-          color="black"
-          class="text-decoration-underline"
-        >
-          実績
-        </v-btn>
-        <v-btn
-          text
-          depressed
-          plain
-          color="black"
-          class="text-decoration-underline"
-        >
-          お問い合わせ
-        </v-btn>
+        <RouteButton to="/products" text="プロダクト" />
+        <RouteButton to="/activity" text="活動内容" />
+        <RouteButton to="/achievements" text="実績" />
+        <RouteButton to="/contact" text="お問い合わせ" />
       </div>
-      <v-btn
-        depressed
-        plain
-      >
-        入部希望者はこちら
-      </v-btn>
+      <v-btn depressed plain> 入部希望者はこちら </v-btn>
       <v-app-bar-nav-icon
         class="hidden-md-and-up"
         @click="drawer = true"
@@ -77,10 +39,15 @@
 </template>
 
 <script>
+import RouteButton from "@/components/route-button/RouteButton.vue";
+
 export default {
+  components: {
+    RouteButton,
+  },
   data: () => ({
-    drawer: false
-  })
+    drawer: false,
+  }),
 };
 </script>
 

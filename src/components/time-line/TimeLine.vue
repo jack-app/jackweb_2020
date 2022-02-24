@@ -5,7 +5,7 @@
       :key="schedule.id"
       class="py-4"
       color="orange"
-      left="true"
+      left
       fill-dot
     >
       <template v-slot:icon>

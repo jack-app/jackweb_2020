@@ -8,9 +8,14 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   components: { ProductListTemplate },
-  template: "<ProductListTemplate />",
+  template: '<ProductListTemplate :num="num" />',
   Vuetify,
   props: Object.keys(argTypes),
 });
 
 export const Default = Template.bind({});
+
+export const Short = Template.bind({});
+Short.args = {
+  num: 2,
+};

@@ -23,6 +23,9 @@ export default {
   components: {
     ProductCard,
   },
+  props: {
+    num: { type: Number, default: undefined },
+  },
   data: () => ({
     products: null,
   }),
@@ -36,7 +39,7 @@ export default {
           let j = Math.floor(Math.random() * (i + 1));
           [array[i], array[j]] = [array[j], array[i]];
         }
-        this.products = array;
+        this.products = array.slice(0, this.num);
       })
       .catch(() => {
         //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。

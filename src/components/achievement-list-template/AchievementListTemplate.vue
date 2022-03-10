@@ -24,7 +24,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.VUE_APP_VERCEL_URL}/api/results`)
+      .get(`${process.env.VUE_APP_VERCEL_URL}/api/achievements`)
       .then((response) => {
         this.achievements = response.data.message;
       })

@@ -48,10 +48,10 @@ app.get("/api/events", (req, res, next) => {
 
 //実績の一覧を取ってくる。（日付で降順、10件）
 //戻り値はmessage:{key: int,name: str,date:str, link:str}
-app.get("/api/results", (req, res, next) => {
+app.get("/api/achievements", (req, res, next) => {
   (async () => {
     const data = await notion.databases.query({
-      database_id: process.env.DATABASE_RESULTS,
+      database_id: process.env.DATABASE_ACHIEVEMENTS,
       sorts: [
         {
           property: "Date",

@@ -14,7 +14,7 @@
             outlined
             to="./activity"
           >
-            詳しく見る　→
+            詳しく見る→
           </v-btn>
         </div>
       </v-col>

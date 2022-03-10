@@ -1,8 +1,8 @@
 <template>
   <v-container class="activities">
     <!--活動内容-->
+    <ContentTitle title="活動内容" />
     <v-container class="activity">
-      <ContentTitle title="活動内容" />
       <ActivityTemplate />
     </v-container>
     <!-- 年間スケジュール -->

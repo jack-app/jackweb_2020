@@ -3,11 +3,10 @@
     <v-row>
       <v-col  class="kanyu" cols="12" xs="12" sm="12" md="5" lg="5" xl="5">
         <p>
-          こちらの日程で活動しています。<br>
-          活動に興味のある方は是非一度見に来てください。
+          {{ text }}
         </p>
         <div class="justify-end tocontact-btn">
-          <a href="./Contact.vue">見学お申し込みフォームへ</a>
+          <a :href="link" target="_blank">{{ btn }}</a>
         </div>
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="7" lg="7" xl="7">
@@ -23,7 +22,11 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: ["text", "btn", "link"],
+};
+</script>
 
 <style scoped>
 

@@ -1,12 +1,15 @@
 <template>
   <v-container class="welcome">
-    <ContentTitle title="jackでできること" />
-    <AbleListTemplate />
-    <ContentTitle title="jackでできること" />
+    <WelcomeActivity />
   </v-container>
 </template>
 
 <script>
-import ContentTitle from "@/components/content-title/ContentTitle.vue";
-import AbleListTemplate from "@/components/able-list-template/AbleListTemplate.vue";
+import WelcomeActivity from "@/components/Welcome-Activity.vue";
+
+export default {
+  components: {
+    WelcomeActivity,
+  },
+};
 </script>

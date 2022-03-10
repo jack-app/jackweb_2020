@@ -6,7 +6,7 @@
         <v-card max-width="800">
           <v-container>
             <v-row>
-              <v-col cols="12" md="8">
+              <v-col cols="12" md="8" order="last" order-md="first">
                 <div class="card-elements">
                   <div class="d-flex flex-column mb-6">
                     <v-card-text class="text-left" max-width="600">
@@ -22,7 +22,7 @@
                   </div>
                 </div>
               </v-col>
-              <v-col cols="12" md="4">
+              <v-col cols="12" md="4" order="first" order-md="last">
                 <v-img
                   max-height="200"
                   src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01H2UMXMI&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=c6tower-22&language=ja_JP"

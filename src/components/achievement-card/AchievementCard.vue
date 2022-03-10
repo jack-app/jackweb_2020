@@ -7,19 +7,14 @@
     </div>
     <v-card-title>{{ name }}</v-card-title>
     <v-card-actions class="justify-end">
-      <Button text="read more" :link="link" />
+      <v-btn color="#F6B352" :href="link">read more</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-import Button from "../button/Button.vue";
-
 export default {
   props: ["name", "date", "link"],
-  components: {
-    Button,
-  },
 };
 </script>
 

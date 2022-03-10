@@ -27,13 +27,7 @@
         @click="drawer = true"
       ></v-app-bar-nav-icon>
     </v-app-bar>
-    <v-navigation-drawer
-      color="secondary"
-      right
-      temporary
-      fixed
-      v-model="drawer"
-    >
+    <v-navigation-drawer color="#FC913A" right temporary fixed v-model="drawer">
       <v-btn
         depressed
         rounded

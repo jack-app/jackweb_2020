@@ -1,40 +1,33 @@
 <template>
   <v-container class="welcome">
-    <ContentTitle title="jackでできること" />
-    <AbleListTemplate />
-    <ContentTitle title="活動内容" />
-    <WelcomeActivity />
-    <ContentTitle title="プロダクト" />
-    <ProductListTemplate :num="num" />
-    <v-btn
-      color="#4C4C4C"
-      style="border-color: #f6b352;"
-      rounded
-      outlined
-      to="./products"
-    >
-      詳しく見る→
-    </v-btn>
-    <ContentTitle title="活動実績" />
-    <AchievementTable />
-    <v-btn
-      color="#4C4C4C"
-      style="border-color: #f6b352;"
-      rounded
-      outlined
-      to="./achievements"
-    >
-      詳しく見る→
-    </v-btn>
-    <ContentTitle title="活動予定" />
-    <WelcomeSchedule
-      :text="text"
-      link="https://google.com"
-      btn="見学申し込みフォームへ"
-    />
-
-    <ContentTitle title="FAQ" />
-    <Questions />
+    <div class="content-container">
+      <ContentTitle title="jackでできること" />
+      <AbleListTemplate />
+    </div>
+    <div class="content-container">
+      <ContentTitle title="活動内容" />
+      <WelcomeActivity />
+    </div>
+    <div class="content-container">
+      <ContentTitle title="プロダクト" />
+      <WelcomeProducts />
+    </div>
+    <div class="content-container">
+      <ContentTitle title="活動実績" />
+      <WelcomeAchievements />
+    </div>
+    <div class="content-container">
+      <ContentTitle title="活動予定" />
+      <WelcomeSchedule
+        :text="text"
+        link="https://google.com"
+        btn="見学申し込みフォームへ"
+      />
+    </div>
+    <div class="content-container">
+      <ContentTitle title="FAQ" />
+      <Questions />
+    </div>
   </v-container>
 </template>
 
@@ -42,8 +35,8 @@
 import ContentTitle from "@/components/content-title/ContentTitle.vue";
 import AbleListTemplate from "@/components/able-list-template/AbleListTemplate.vue";
 import WelcomeActivity from "@/components/welcome-activity/WelcomeActivity.vue";
-import ProductListTemplate from "@/components/product-list-template/ProductListTemplate.vue";
-import AchievementTable from "@/components/achievement-table/AchievementTable.vue";
+import WelcomeProducts from "@/components/welcome-products/WelcomeProducts.vue";
+import WelcomeAchievements from "@/components/welcome-achievements/WelcomeAchievements.vue";
 import WelcomeSchedule from "@/components/welcome-schedule/WelcomeSchedule.vue";
 import Questions from "@/components/questions/Questions.vue";
 
@@ -52,8 +45,8 @@ export default {
     ContentTitle,
     AbleListTemplate,
     WelcomeActivity,
-    ProductListTemplate,
-    AchievementTable,
+    WelcomeProducts,
+    WelcomeAchievements,
     WelcomeSchedule,
     Questions,
   },
@@ -64,3 +57,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.content-container {
+  margin: 20px 0;
+}
+</style>

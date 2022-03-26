@@ -7,15 +7,7 @@
           イベントイベントイベント
         </v-card-text>
         <div class="button__wrapper">
-          <v-btn
-            color="#4C4C4C"
-            style="border-color: #f6b352;"
-            rounded
-            outlined
-            to="./activity"
-          >
-            詳しく見る→
-          </v-btn>
+          <FurtherButton to="./activity" />
         </div>
       </v-col>
       <v-col cols="12" md="4" order="first" order-md="last">
@@ -28,7 +20,15 @@
   </v-container>
 </template>
 
-<script></script>
+<script>
+import FurtherButton from "@/components/further-button/FurtherButton.vue";
+
+export default {
+  components: {
+    FurtherButton,
+  },
+};
+</script>
 
 <style>
 .button__wrapper {

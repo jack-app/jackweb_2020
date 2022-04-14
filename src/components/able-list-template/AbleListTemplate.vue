@@ -3,11 +3,11 @@
     <v-row>
       <v-col
         cols="12"
-        xs="12"
-        sm="12"
+        xs="6"
+        sm="6"
         md="6"
-        lg="6"
-        xl="6"
+        lg="3"
+        xl="3"
         v-for="able in ables"
         :key="able.key"
       >

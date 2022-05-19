@@ -1,19 +1,18 @@
-const app = require("express")();
+const express = require("express");
 const { Client } = require("@notionhq/client");
+const serverless = require("serverless-http");
+const app = express();
 require("dotenv").config();
 
 const notion = new Client({
   auth: process.env.NOTION_SECRET,
 });
 
-//node api/index.jsでサーバー起動
-var server = app.listen(3000, function () {
-  console.log("Node.js is listening to PORT:" + server.address().port);
-});
+const router = express.Router();
 
 //イベントの一覧を取ってくる。（日付で降順、5件）
 //戻り値はmessage:{key: int,name: str,tags: [str],date:str}
-app.get("/api/events", (req, res, next) => {
+router.get("/events", (req, res, next) => {
   (async () => {
     const data = await notion.databases.query({
       database_id: process.env.DATABASE_EVENTS,
@@ -48,7 +47,7 @@ app.get("/api/events", (req, res, next) => {
 
 //実績の一覧を取ってくる。（日付で降順、10件）
 //戻り値はmessage:{key: int,name: str,date:str, link:str}
-app.get("/api/achievements", (req, res, next) => {
+router.get("/achievements", (req, res, next) => {
   (async () => {
     const data = await notion.databases.query({
       database_id: process.env.DATABASE_ACHIEVEMENTS,
@@ -78,7 +77,7 @@ app.get("/api/achievements", (req, res, next) => {
 
 //プロダクトの一覧を取ってくる。（掲載に☑、少なくとも1リンクあり）
 //戻り値はmessage:{key: int,icon:url,description:str,name: str, ios:str,android:str,web:str}
-app.get("/api/products", (req, res, next) => {
+router.get("/products", (req, res, next) => {
   (async () => {
     const data = await notion.databases.query({
       database_id: process.env.DATABASE_PRODUCTS,
@@ -136,4 +135,8 @@ app.get("/api/products", (req, res, next) => {
   })().catch(next);
 });
 
+app.use("/.netlify/functions/api", router);
+
 module.exports = app;
+
+module.exports.handler = serverless(app);

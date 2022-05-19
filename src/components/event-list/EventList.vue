@@ -29,7 +29,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.VUE_APP_VERCEL_URL}/api/events`)
+      .get(`/.netlify/functions/api/events`)
       .then((response) => {
         this.events = response.data.message;
       })

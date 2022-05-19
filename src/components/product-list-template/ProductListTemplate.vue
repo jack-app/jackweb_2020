@@ -31,7 +31,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.VUE_APP_VERCEL_URL}/api/products`)
+      .get(`/.netlify/functions/api/products`)
       .then((response) => {
         this.products = response.data.message;
         let array = response.data.message.slice();

@@ -24,7 +24,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.URL}/.netlify/functions/api/achievements`)
+      .get(`/.netlify/functions/api/achievements`)
       .then((response) => {
         this.achievements = response.data.message;
       })

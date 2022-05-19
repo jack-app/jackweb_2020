@@ -31,7 +31,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.URL}/.netlify/functions/api/products`)
+      .get(`/.netlify/functions/api/products`)
       .then((response) => {
         this.products = response.data.message;
         let array = response.data.message.slice();

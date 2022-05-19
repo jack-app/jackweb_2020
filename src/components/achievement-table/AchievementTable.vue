@@ -29,7 +29,7 @@ export default {
   }),
   mounted() {
     axios
-      .get(`${process.env.URL}/.netlify/functions/api/achievements`)
+      .get(`/.netlify/functions/api/achievements`)
       .then((response) => {
         this.results = response.data.message.slice(0, 5);
       })

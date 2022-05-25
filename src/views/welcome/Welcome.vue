@@ -20,7 +20,7 @@
       <ContentTitle title="活動予定" />
       <WelcomeSchedule
         :text="text"
-        link="https://google.com"
+        link="https://forms.gle/e27FUtpxokwY9uVR7"
         btn="見学申し込みフォームへ"
       />
     </div>

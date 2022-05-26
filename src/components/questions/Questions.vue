@@ -54,7 +54,7 @@ export default {
       {
         asktext: "年会費はいくらですか？　何に使いますか？",
         anstext:
-          "年会費は500円です。AppStoreにアプリをリリースするのに使います。",
+          "年会費は2000円です。AppStoreにアプリをリリースするのに使います。",
       },
       {
         asktext: "どれくらいの頻度で活動に参加する必要がありますか？",
@@ -63,7 +63,7 @@ export default {
       },
       {
         asktext: "現在jackに何人所属していますか？",
-        anstext: "約50人です。",
+        anstext: "約70人です。",
       },
       {
         asktext: "男女比はどれくらいですか？",

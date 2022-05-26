@@ -18,7 +18,7 @@
             <v-icon large>mdi-twitter</v-icon>
           </v-btn>
         </v-col>
-        <v-col cols="4">©jack 2021 </v-col>
+        <v-col cols="4">©jack 2022 </v-col>
         <v-spacer></v-spacer>
       </v-row>
     </v-container>

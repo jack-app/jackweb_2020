@@ -34,10 +34,6 @@ export default {
     drawer: false,
     menuItems: [
       {
-        id: "#festival",
-        name: "名大祭のお知らせ"
-      },
-      {
         id: "#can",
         name: "jackでできること"
       },

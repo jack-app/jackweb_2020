@@ -4,6 +4,10 @@
     <v-main>
       <Top />
       <div class="contents">
+        <div class="content" id="festival">
+          <div class="display-1">名大祭のお知らせ</div>
+          <Festival />
+        </div>
         <div class="content" id="can">
           <div class="display-1">jackでできること</div>
           <DekirukotoCards />
@@ -51,6 +55,7 @@ import Questions from "./components/Questions.vue";
 import Menubar from "./components/Menubar.vue";
 import ActivityIntroduction from "./components/ActivityIntroduction.vue";
 import WelcomeTour from "./components/WelcomeTour.vue";
+import Festival from "./components/Festival.vue";
 
 export default {
   name: "App",
@@ -64,6 +69,7 @@ export default {
     Calendar,
     Questions,
     WelcomeTour,
+    Festival,
   },
 };
 </script>

@@ -5,6 +5,10 @@
     "products": {
       ".read": true,
       ".write": false
+    },
+    "festival": {
+      ".read": true,
+      ".write": false
     }
   }
 }

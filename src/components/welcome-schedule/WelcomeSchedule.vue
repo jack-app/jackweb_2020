@@ -10,21 +10,20 @@
         </div>
       </v-col>
       <v-col cols="12" xs="12" sm="12" md="7" lg="7" xl="7">
-        <iframe
-          class="calender"
-          src="https://calendar.google.com/calendar/embed?src=jackapp.tmy@gmail.com&ctz=Asia/Tokyo"
-          showTitle="0"
-          showTabs="0"
-          showPrint="0"
-        ></iframe>
+        <Calendar />
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
+import Calendar from "@/components/calendar/Calendar.vue"
+
 export default {
   props: ["text", "btn", "link"],
+  components:{
+    Calendar
+  }
 };
 </script>
 

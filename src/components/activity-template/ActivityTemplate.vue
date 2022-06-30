@@ -7,12 +7,13 @@
             <v-col cols="12" md="7">
               <v-img :src="require('@/assets/activity.png')" />
             </v-col>
-            <v-col cols="12" md="5">
+            <v-col cols="12" md="5" class="d-flex flex-column justify-center">
               <v-card-title>通常活動</v-card-title>
-              <v-card-text>
-                毎週木曜日、隔週土曜日に集まって活動しています！
-                現在はzoomやgatherで活動していますが、コロナが開けたら名古屋大学の図書館での活動を再開します。
+              <v-card-text >
+                隔週水曜日・隔週金曜日に集まってワイワイ活動しています！
+                現在はzoomやgatherで活動していますが、コロナが明けたら名古屋大学の図書館での活動を再開します。
               </v-card-text>
+              
             </v-col>
           </v-row>
         </v-card>
@@ -22,7 +23,7 @@
       <v-col cols="12">
         <v-card>
           <v-row>
-            <v-col cols="12" md="5" order="2" order-md="1">
+            <v-col cols="12" md="5" order="2" order-md="1" class="d-flex flex-column justify-center">
               <v-card-title>イベント</v-card-title>
               <v-card-text>
                 jackHackというハッカソンを例年ゴールデンウイークに行っています。

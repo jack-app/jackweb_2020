@@ -22,7 +22,7 @@ export default {
         id: 1,
         month: 4,
         title: "新入生歓迎会",
-        detail: "新歓を行います",
+        detail: "新歓を行います。",
       },
       {
         id: 2,

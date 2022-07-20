@@ -8,7 +8,7 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   components: { LoadingText },
-  template: '<LoadingText :link="link" :platform="platform" />',
+  template: '<LoadingText />',
   Vuetify,
   props: Object.keys(argTypes),
 });

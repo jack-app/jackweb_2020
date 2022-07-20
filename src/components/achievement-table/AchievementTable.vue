@@ -5,15 +5,21 @@
       :items="results"
       hide-default-header
       hide-default-footer
+      v-if="results.length!=0"
     >
     </v-data-table>
+    <LoadingDisplay ref="load"/>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import LoadingDisplay from "../loading-display/LoadingDisplay.vue";
 
 export default {
+  components:{
+    LoadingDisplay
+  },
   data: () => ({
     headers: [
       {
@@ -32,9 +38,10 @@ export default {
       .get(`/.netlify/functions/api/achievements`)
       .then((response) => {
         this.results = response.data.message.slice(0, 5);
+        this.$refs.load.success();
       })
       .catch(() => {
-        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+        this.$refs.load.failure();
       });
   },
 };

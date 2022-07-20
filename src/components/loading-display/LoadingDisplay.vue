@@ -18,6 +18,16 @@ export default{
     LoadingText,
     FailLoading
   },
-  props:['loading']
+  data:()=>({
+    loading:"loading"
+  }),
+  methods:{
+    success(){
+      this.loading="success";
+    },
+    failure(){
+      this.loading="failure";
+    }
+  }
 }
 </script>

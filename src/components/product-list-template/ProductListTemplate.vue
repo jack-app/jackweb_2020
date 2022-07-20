@@ -1,7 +1,9 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="6" v-for="product in products" :key="product.key">
+      <v-col cols="12" md="6" 
+          v-for="product in products"
+          :key="product.key">
         <ProductCard
           :name="product.name"
           :icon="product.icon"
@@ -11,18 +13,21 @@
           :description="product.description"
         />
       </v-col>
+      <LoadingDisplay ref="load" />
     </v-row>
   </v-container>
 </template>
 
 <script>
 import ProductCard from "../product-card/ProductCard.vue";
+import LoadingDisplay from "../loading-display/LoadingDisplay.vue";
 import axios from "axios";
 
 export default {
   components: {
     ProductCard,
-  },
+    LoadingDisplay
+},
   props: {
     num: { type: Number, default: undefined },
   },
@@ -40,9 +45,10 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         this.products = array.slice(0, this.num);
+        this.$refs.load.success();
       })
       .catch(() => {
-        //エラーが来た時にどうしようねってやつ。特に対処法を思いついていない。
+        this.$refs.load.failure();
       });
   },
 };

@@ -17,7 +17,6 @@ export default {
   },
   data: () => ({
     schedules: [
-      // ここにapiから取ってきたやついれて
       {
         id: 1,
         month: 4,

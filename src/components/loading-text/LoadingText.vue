@@ -4,7 +4,7 @@
 
     <v-progress-circular
       indeterminate
-      color="primary"
+      color="#F68655"
       class="mx-auto"
     >
     </v-progress-circular>

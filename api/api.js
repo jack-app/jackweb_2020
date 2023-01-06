@@ -22,6 +22,22 @@ router.get("/events", (req, res, next) => {
           direction: "descending",
         },
       ], //日付降順でソート
+      filter: {
+        and: [
+          {
+            property: "Name",
+            text: {
+              is_not_empty: true,
+            },
+          },
+          {
+            property: "Date",
+            date: {
+              is_not_empty: true,
+            },
+          },
+        ],
+      },
       page_size: 5, //5件取ってくる
     });
     if (data.object != "list") {
@@ -57,6 +73,16 @@ router.get("/achievements", (req, res, next) => {
           direction: "descending",
         },
       ],
+      filter: {
+        and: [
+          {
+            property: "Name",
+            text: {
+              is_not_empty: true,
+            },
+          },
+        ],
+      },
       page_size: 10,
     });
     if (data.object != "list") {

@@ -30,12 +30,6 @@ router.get("/events", (req, res, next) => {
               is_not_empty: true,
             },
           },
-          {
-            property: "Date",
-            date: {
-              is_not_empty: true,
-            },
-          },
         ],
       },
       page_size: 5, //5件取ってくる

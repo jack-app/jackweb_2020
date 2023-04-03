@@ -21,7 +21,6 @@ export default {
   },
   watch: {
     $route(to) {
-      console.log(to.path);
       if (to.path === "/") {
         this.to = null;
         this.vscto = "#applicant";

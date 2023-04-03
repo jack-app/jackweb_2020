@@ -19,6 +19,16 @@ export default {
       vscto: null,
     };
   },
+  mounted() {
+    const path = this.$route.path;
+    if (path === "/") {
+      this.to = null;
+      this.vscto = "#applicant";
+    } else {
+      this.to = "/";
+      this.vscto = null;
+    }
+  },
   watch: {
     $route(to) {
       if (to.path === "/") {

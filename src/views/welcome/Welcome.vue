@@ -16,13 +16,9 @@
       <ContentTitle title="活動実績" />
       <WelcomeAchievements />
     </div>
-    <div class="content-container">
-      <ContentTitle title="活動予定" />
-      <WelcomeSchedule
-        :text="text"
-        link="https://forms.gle/e27FUtpxokwY9uVR7"
-        btn="見学申し込みフォームへ"
-      />
+    <div class="content-container" id="applicant">
+      <ContentTitle title="新歓" />
+      <ShinkanSchedule :link="link" :btn="btn" />
     </div>
     <div class="content-container">
       <ContentTitle title="FAQ" />
@@ -37,7 +33,7 @@ import AbleListTemplate from "@/components/able-list-template/AbleListTemplate.v
 import WelcomeActivity from "@/components/welcome-activity/WelcomeActivity.vue";
 import WelcomeProducts from "@/components/welcome-products/WelcomeProducts.vue";
 import WelcomeAchievements from "@/components/welcome-achievements/WelcomeAchievements.vue";
-import WelcomeSchedule from "@/components/welcome-schedule/WelcomeSchedule.vue";
+import ShinkanSchedule from "@/components/shinkan-schedule/ShinkanSchedule.vue";
 import Questions from "@/components/questions/Questions.vue";
 
 export default {
@@ -47,13 +43,16 @@ export default {
     WelcomeActivity,
     WelcomeProducts,
     WelcomeAchievements,
-    WelcomeSchedule,
+    ShinkanSchedule,
     Questions,
   },
   data: () => ({
-    text:
-      "こちらの日程で活動しています。\n活動に興味のある方は是非一度見に来てください",
+    // text:
+    //   "jackでは現在新歓を行っています。\n<オフライン>\n4/8(土)13:45～16:15\n4/16(日)13:45～16:15\n@名古屋学生青年センター",
     num: 2,
+    link:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeqODt5jRs_UO90-jSWaRq-1HI-_G5RZFCZyLxw3eN3Ugjekg/viewform",
+    btn: "新歓申し込みフォームへ",
   }),
 };
 </script>

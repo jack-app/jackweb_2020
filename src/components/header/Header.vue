@@ -19,24 +19,14 @@
           >{{ link.title }}
         </v-btn>
       </div>
-      <v-btn depressed rounded outlined to="/" style="background: #fff;">
-        入部希望者はこちら
-      </v-btn>
+      <ForApplicantButton :to="to" />
       <v-app-bar-nav-icon
         class="hidden-md-and-up"
         @click="drawer = true"
       ></v-app-bar-nav-icon>
     </v-app-bar>
     <v-navigation-drawer color="#FC913A" right temporary fixed v-model="drawer">
-      <v-btn
-        depressed
-        rounded
-        outlined
-        to="/"
-        style="background: #fff; margin: 10px 0 0 0;"
-      >
-        入部希望者はこちら
-      </v-btn>
+      <ForApplicantButton :to="to" />
       <v-list nav flat>
         <v-list-item-group>
           <v-list-item v-for="link in links" :key="link.to" :to="link.to">
@@ -49,7 +39,12 @@
 </template>
 
 <script>
+import ForApplicantButton from "@/components/for-applicant-button/ForApplicantButton.vue";
+
 export default {
+  components: {
+    ForApplicantButton,
+  },
   data: () => ({
     drawer: false,
     links: [
@@ -58,6 +53,9 @@ export default {
       { title: "実績", to: "/achievements" },
       { title: "お問い合わせ", to: "/contact" },
     ],
+    to: {
+      name: "/",
+    },
   }),
 };
 </script>

@@ -7,7 +7,7 @@
     :to="to"
     v-scroll-to="vscto"
   >
-    新歓申し込みはこちら
+    入部希望者はこちら
   </v-btn>
 </template>
 

@@ -66,6 +66,18 @@ export default {};
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .notification-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-title {
+    font-size: 22px;
+  }
+}
+
 .notification-line {
   border: none;
   border-top: 5px solid #ffe500;
@@ -78,11 +90,24 @@ export default {};
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .notification-description {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-description {
+    font-size: 18px;
+  }
+}
+
 .notification-link {
   display: flex;
   align-items: center;
   height: 1.5em;
-  max-width: 45%;
+  max-width: 50%;
+  min-width: 200px;
   font-size: 32px;
   background-color: #ffa61f;
   border-radius: 20px;
@@ -114,5 +139,17 @@ export default {};
   margin-right: 20px;
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .notification-link-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification-link-text {
+    font-size: 12px;
+  }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <v-container class="welcome">
+    <NoticeSiteRelocation />
     <div class="content-container">
       <ContentTitle title="jackでできること" />
       <AbleListTemplate />
@@ -35,6 +36,7 @@ import WelcomeProducts from "@/components/welcome-products/WelcomeProducts.vue";
 import WelcomeAchievements from "@/components/welcome-achievements/WelcomeAchievements.vue";
 import WelcomeSchedule from "@/components/welcome-schedule/WelcomeSchedule.vue";
 import Questions from "@/components/questions/Questions.vue";
+import NoticeSiteRelocation from "@/components/notice-site-relocation/NoticeSiteRelocation.vue";
 
 export default {
   components: {
@@ -45,6 +47,7 @@ export default {
     WelcomeAchievements,
     WelcomeSchedule,
     Questions,
+    NoticeSiteRelocation,
   },
   data: () => ({
     text:

@@ -4,7 +4,7 @@
       <div class="notification-image-wrapper">
         <img
           :src="require('@/assets/chikachika.svg')"
-          alt="お知らせ Image"
+          alt=""
           class="notification-image"
         />
       </div>
@@ -106,7 +106,6 @@ export default {};
   display: flex;
   align-items: center;
   height: 1.5em;
-  max-width: 50%;
   min-width: 200px;
   font-size: 32px;
   background-color: #ffa61f;
@@ -134,6 +133,12 @@ export default {};
   margin-left: 5px;
 }
 
+@media (max-width: 480px) {
+  .notification-arrow {
+    display: none;
+  }
+}
+
 .notification-link-text {
   margin-left: 20px;
   margin-right: 20px;
@@ -149,7 +154,7 @@ export default {};
 
 @media (max-width: 480px) {
   .notification-link-text {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 </style>

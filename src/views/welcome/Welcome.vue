@@ -50,8 +50,7 @@ export default {
     text:
       "こちらの日程で活動しています。\njackの活動に興味のある方は是非一度見に来てください！",
     num: 2,
-    // link: "https://forms.gle/e27FUtpxokwY9uVR7", // TODO: デフォルトのフォーム：新歓が終わったらこっちに戻す
-    link: "https://forms.gle/AdiHynB9ES7xJC497",
+    link: "https://forms.gle/e27FUtpxokwY9uVR7",
     btn: "見学申し込みフォームへ",
   }),
 };

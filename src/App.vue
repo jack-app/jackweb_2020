@@ -2,6 +2,7 @@
   <v-app>
     <Header />
     <v-main class="page">
+      <NoticeSiteRelocation />
       <router-view />
     </v-main>
     <Footer />
@@ -11,14 +12,16 @@
 <script>
 import Header from "@/components/header/Header.vue";
 import Footer from "@/components/footer/Footer.vue";
+import NoticeSiteRelocation from "@/components/notice-site-relocation/NoticeSiteRelocation.vue";
 
 export default {
   name: "App",
 
   components: {
     Header,
-    Footer
-  }
+    Footer,
+    NoticeSiteRelocation,
+  },
 };
 </script>
 

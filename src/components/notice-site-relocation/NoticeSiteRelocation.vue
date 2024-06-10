@@ -18,11 +18,11 @@
         <div class="notification-arrow"></div>
         <div class="notification-arrow"></div>
         <a
-          :href="link"
+          href="https://www.jackapp.jp/"
           rel="noopener noreferrer"
           target="_blank"
           class="notification-link-text"
-          >www.jackun???.com</a
+          >https://www.jackapp.jp/</a
         >
       </div>
     </div>
